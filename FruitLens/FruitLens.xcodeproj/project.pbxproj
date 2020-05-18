@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		844FC1772472C23600D32668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1762472C23600D32668 /* AppDelegate.swift */; };
+		844FC1802472C23700D32668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FC17F2472C23700D32668 /* Assets.xcassets */; };
+		844FC1832472C23700D32668 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1822472C23700D32668 /* Preview Assets.xcassets */; };
+		844FC1AA2472C43E00D32668 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1A92472C43E00D32668 /* ViewController.swift */; };
+		844FC1AC2472C4F800D32668 /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1AB2472C4F800D32668 /* VisionObjectRecognitionViewController.swift */; };
+		844FC1B02472C5DE00D32668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1AF2472C5DE00D32668 /* LaunchScreen.storyboard */; };
+		844FC1B42472C67B00D32668 /* Breakfast Finder Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1B32472C67B00D32668 /* Breakfast Finder Logo.png */; };
+		844FC1B62472C68300D32668 /* ObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1B52472C68300D32668 /* ObjectDetector.mlmodel */; };
+		844FC1B82472C8A500D32668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1B72472C8A500D32668 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		844FC18D2472C23700D32668 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844FC16B2472C23600D32668 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844FC1722472C23600D32668;
+			remoteInfo = FruitLens;
+		};
+		844FC1982472C23700D32668 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844FC16B2472C23600D32668 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844FC1722472C23600D32668;
+			remoteInfo = FruitLens;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		844FC1732472C23600D32668 /* FruitLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		844FC1762472C23600D32668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		844FC17F2472C23700D32668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		844FC1822472C23700D32668 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		844FC18C2472C23700D32668 /* FruitLensTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitLensTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		844FC1972472C23700D32668 /* FruitLensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitLensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		844FC1A92472C43E00D32668 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		844FC1AB2472C4F800D32668 /* VisionObjectRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionViewController.swift; sourceTree = "<group>"; };
+		844FC1AF2472C5DE00D32668 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		844FC1B32472C67B00D32668 /* Breakfast Finder Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Breakfast Finder Logo.png"; sourceTree = "<group>"; };
+		844FC1B52472C68300D32668 /* ObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetector.mlmodel; sourceTree = "<group>"; };
+		844FC1B72472C8A500D32668 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		844FC1702472C23600D32668 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844FC1892472C23700D32668 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844FC1942472C23700D32668 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		844FC16A2472C23600D32668 = {
+			isa = PBXGroup;
+			children = (
+				844FC1752472C23600D32668 /* FruitLens */,
+				844FC1742472C23600D32668 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		844FC1742472C23600D32668 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				844FC1732472C23600D32668 /* FruitLens.app */,
+				844FC18C2472C23700D32668 /* FruitLensTests.xctest */,
+				844FC1972472C23700D32668 /* FruitLensUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		844FC1752472C23600D32668 /* FruitLens */ = {
+			isa = PBXGroup;
+			children = (
+				844FC1762472C23600D32668 /* AppDelegate.swift */,
+				844FC1A92472C43E00D32668 /* ViewController.swift */,
+				844FC1AB2472C4F800D32668 /* VisionObjectRecognitionViewController.swift */,
+				844FC1B72472C8A500D32668 /* Main.storyboard */,
+				844FC17F2472C23700D32668 /* Assets.xcassets */,
+				844FC1AF2472C5DE00D32668 /* LaunchScreen.storyboard */,
+				844FC1B52472C68300D32668 /* ObjectDetector.mlmodel */,
+				844FC1B32472C67B00D32668 /* Breakfast Finder Logo.png */,
+				844FC1812472C23700D32668 /* Preview Content */,
+			);
+			path = FruitLens;
+			sourceTree = "<group>";
+		};
+		844FC1812472C23700D32668 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				844FC1822472C23700D32668 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		844FC1722472C23600D32668 /* FruitLens */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844FC1A02472C23700D32668 /* Build configuration list for PBXNativeTarget "FruitLens" */;
+			buildPhases = (
+				844FC16F2472C23600D32668 /* Sources */,
+				844FC1702472C23600D32668 /* Frameworks */,
+				844FC1712472C23600D32668 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FruitLens;
+			productName = FruitLens;
+			productReference = 844FC1732472C23600D32668 /* FruitLens.app */;
+			productType = "com.apple.product-type.application";
+		};
+		844FC18B2472C23700D32668 /* FruitLensTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844FC1A32472C23700D32668 /* Build configuration list for PBXNativeTarget "FruitLensTests" */;
+			buildPhases = (
+				844FC1882472C23700D32668 /* Sources */,
+				844FC1892472C23700D32668 /* Frameworks */,
+				844FC18A2472C23700D32668 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844FC18E2472C23700D32668 /* PBXTargetDependency */,
+			);
+			name = FruitLensTests;
+			productName = FruitLensTests;
+			productReference = 844FC18C2472C23700D32668 /* FruitLensTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		844FC1962472C23700D32668 /* FruitLensUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844FC1A62472C23700D32668 /* Build configuration list for PBXNativeTarget "FruitLensUITests" */;
+			buildPhases = (
+				844FC1932472C23700D32668 /* Sources */,
+				844FC1942472C23700D32668 /* Frameworks */,
+				844FC1952472C23700D32668 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844FC1992472C23700D32668 /* PBXTargetDependency */,
+			);
+			name = FruitLensUITests;
+			productName = FruitLensUITests;
+			productReference = 844FC1972472C23700D32668 /* FruitLensUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		844FC16B2472C23600D32668 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = ChristophWeber;
+				TargetAttributes = {
+					844FC1722472C23600D32668 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					844FC18B2472C23700D32668 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 844FC1722472C23600D32668;
+					};
+					844FC1962472C23700D32668 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 844FC1722472C23600D32668;
+					};
+				};
+			};
+			buildConfigurationList = 844FC16E2472C23600D32668 /* Build configuration list for PBXProject "FruitLens" */;
+			compatibilityVersion = "Xcode 11.4";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 844FC16A2472C23600D32668;
+			productRefGroup = 844FC1742472C23600D32668 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				844FC1722472C23600D32668 /* FruitLens */,
+				844FC18B2472C23700D32668 /* FruitLensTests */,
+				844FC1962472C23700D32668 /* FruitLensUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		844FC1712472C23600D32668 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844FC1832472C23700D32668 /* Preview Assets.xcassets in Resources */,
+				844FC1B02472C5DE00D32668 /* LaunchScreen.storyboard in Resources */,
+				844FC1B42472C67B00D32668 /* Breakfast Finder Logo.png in Resources */,
+				844FC1B82472C8A500D32668 /* Main.storyboard in Resources */,
+				844FC1802472C23700D32668 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844FC18A2472C23700D32668 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844FC1952472C23700D32668 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		844FC16F2472C23600D32668 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844FC1AA2472C43E00D32668 /* ViewController.swift in Sources */,
+				844FC1772472C23600D32668 /* AppDelegate.swift in Sources */,
+				844FC1AC2472C4F800D32668 /* VisionObjectRecognitionViewController.swift in Sources */,
+				844FC1B62472C68300D32668 /* ObjectDetector.mlmodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844FC1882472C23700D32668 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844FC1932472C23700D32668 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		844FC18E2472C23700D32668 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844FC1722472C23600D32668 /* FruitLens */;
+			targetProxy = 844FC18D2472C23700D32668 /* PBXContainerItemProxy */;
+		};
+		844FC1992472C23700D32668 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844FC1722472C23600D32668 /* FruitLens */;
+			targetProxy = 844FC1982472C23700D32668 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		844FC19E2472C23700D32668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		844FC19F2472C23700D32668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		844FC1A12472C23700D32668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FruitLens/Preview Content\"";
+				DEVELOPMENT_TEAM = XG9N63BT3R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FruitLens/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = piose.eleven.FruitLens;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		844FC1A22472C23700D32668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FruitLens/Preview Content\"";
+				DEVELOPMENT_TEAM = XG9N63BT3R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FruitLens/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = piose.eleven.FruitLens;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		844FC1A42472C23700D32668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XG9N63BT3R;
+				INFOPLIST_FILE = FruitLensTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = piose.eleven.FruitLensTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FruitLens.app/FruitLens";
+			};
+			name = Debug;
+		};
+		844FC1A52472C23700D32668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XG9N63BT3R;
+				INFOPLIST_FILE = FruitLensTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = piose.eleven.FruitLensTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FruitLens.app/FruitLens";
+			};
+			name = Release;
+		};
+		844FC1A72472C23700D32668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XG9N63BT3R;
+				INFOPLIST_FILE = FruitLensUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = piose.eleven.FruitLensUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FruitLens;
+			};
+			name = Debug;
+		};
+		844FC1A82472C23700D32668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XG9N63BT3R;
+				INFOPLIST_FILE = FruitLensUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = piose.eleven.FruitLensUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FruitLens;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		844FC16E2472C23600D32668 /* Build configuration list for PBXProject "FruitLens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844FC19E2472C23700D32668 /* Debug */,
+				844FC19F2472C23700D32668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844FC1A02472C23700D32668 /* Build configuration list for PBXNativeTarget "FruitLens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844FC1A12472C23700D32668 /* Debug */,
+				844FC1A22472C23700D32668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844FC1A32472C23700D32668 /* Build configuration list for PBXNativeTarget "FruitLensTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844FC1A42472C23700D32668 /* Debug */,
+				844FC1A52472C23700D32668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844FC1A62472C23700D32668 /* Build configuration list for PBXNativeTarget "FruitLensUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844FC1A72472C23700D32668 /* Debug */,
+				844FC1A82472C23700D32668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 844FC16B2472C23600D32668 /* Project object */;
+}
