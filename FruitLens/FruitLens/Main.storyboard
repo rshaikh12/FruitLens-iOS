@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xOp-Az-4uB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xOp-Az-4uB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Vision Object Recognition View Controller-->
         <scene sceneID="EfN-sg-68i">
             <objects>
-                <viewController id="xOp-Az-4uB" customClass="VisionObjectRecognitionViewController" customModule="Fruits" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xOp-Az-4uB" customClass="VisionObjectRecognitionViewController" customModule="FruitLens" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TlC-kE-V1S"/>
                         <viewControllerLayoutGuide type="bottom" id="WIf-de-cGp"/>
@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rge-Y6-F3a" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="99"/>
+            <point key="canvasLocation" x="131.8840579710145" y="98.4375"/>
         </scene>
     </scenes>
 </document>

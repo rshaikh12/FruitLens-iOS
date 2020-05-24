@@ -2,7 +2,7 @@
 //  VisionObjectRecognitionViewController.swift
 //  FruitLens
 //
-//  Created by admin on 18.05.20.
+//  Created by Christoph Weber on 18.05.20.
 //  Copyright © 2020 ChristophWeber. All rights reserved.
 //
 
