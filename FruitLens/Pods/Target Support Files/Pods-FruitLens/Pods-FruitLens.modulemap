@@ -1,0 +1,6 @@
+framework module Pods_FruitLens {
+  umbrella header "Pods-FruitLens-umbrella.h"
+
+  export *
+  module * { export * }
+}
