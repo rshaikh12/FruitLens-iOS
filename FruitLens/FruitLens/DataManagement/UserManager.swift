@@ -25,14 +25,14 @@ class UserManager {
     })
   }
   
-  func login(user: ObjectUser, completion: @escaping CompletionObject<FirestoreResponse>) {
-    guard let email = user.email, let password = user.password else { completion(.failure); return }
-    Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
+  func login(user: ObjectUser, completion: @escaping CompletionObject<(AuthDataResult?, FirestoreResponse)>) {
+    guard let email = user.email, let password = user.password else { completion((nil, .failure)); return }
+    Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
       if error.isNone {
-        completion(.success)
+        completion((result, .success))
         return
       }
-      completion(.failure)
+      completion((nil, .failure))
     }
   }
   
@@ -72,7 +72,7 @@ class UserManager {
     }
   }
   
-  @discardableResult func logout() -> Bool {
+  @discardableResult static func logout() -> Bool {
     do {
       try Auth.auth().signOut()
       return true

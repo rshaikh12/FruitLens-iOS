@@ -19,4 +19,15 @@ extension UIViewController {
     }))
     present(alert, animated: true, completion: nil)
   }
+    
+    func canPerformSegue(withIdentifier id: String) -> Bool {
+        guard let segues = self.value(forKey: "storyboardSegueTemplates") as? [NSObject] else { return false }
+        return segues.first { $0.value(forKey: "identifier") as? String == id } != nil
+    }
+    
+    /// Performs segue with passed identifier, if self can perform it.
+    func performSegueIfPossible(id: String?, sender: AnyObject? = nil) {
+        guard let id = id, canPerformSegue(withIdentifier: id) else { return }
+        self.performSegue(withIdentifier: id, sender: sender)
+    }
 }
