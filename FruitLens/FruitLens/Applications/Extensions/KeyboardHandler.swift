@@ -14,6 +14,18 @@ protocol KeyboardHandler: UIViewController {
   var bottomInset: CGFloat { get }
 }
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+}
+
 extension KeyboardHandler {
   func addKeyboardObservers(_ completion: CompletionObject<Bool>? = nil) {
     NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) {[weak self] (notification) in
@@ -25,6 +37,7 @@ extension KeyboardHandler {
       completion?(false)
     }
   }
+    
   
   private func handleKeyboard(notification: Notification) {
     guard let userInfo = notification.userInfo else { return }

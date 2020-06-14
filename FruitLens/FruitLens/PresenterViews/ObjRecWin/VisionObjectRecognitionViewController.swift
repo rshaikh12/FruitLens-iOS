@@ -18,6 +18,7 @@ class VisionObjectRecognitionViewController: ObjViewController {
     // Vision parts
     private var requests = [VNRequest]()
     
+    
     @discardableResult
     func setupVision() -> NSError? {
         // Setup Vision parts
@@ -33,6 +34,8 @@ class VisionObjectRecognitionViewController: ObjViewController {
                     // perform all the UI updates on the main queue
                     if let results = request.results {
                         self.drawVisionRequestResults(results)
+                    
+                        
                     }
                 })
             })
@@ -156,5 +159,8 @@ class VisionObjectRecognitionViewController: ObjViewController {
         shapeLayer.cornerRadius = 7
         return shapeLayer
     }
+    
+
+    
     
 }

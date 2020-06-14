@@ -31,6 +31,7 @@
 		4E2510D7248D7DEE009EFE52 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510D6248D7DEE009EFE52 /* Database.swift */; };
 		4E2510DA248D8669009EFE52 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510D9248D8669009EFE52 /* Food.swift */; };
 		4E2510F9248D8A8E009EFE52 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510F8248D8A8E009EFE52 /* DateExtension.swift */; };
+		8446EBF72493CBB300A65C67 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EBF62493CBB300A65C67 /* JournalEntry.swift */; };
 		844FC1772472C23600D32668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1762472C23600D32668 /* AppDelegate.swift */; };
 		844FC1802472C23700D32668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FC17F2472C23700D32668 /* Assets.xcassets */; };
 		844FC1832472C23700D32668 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1822472C23700D32668 /* Preview Assets.xcassets */; };
@@ -40,6 +41,26 @@
 		844FC1B42472C67B00D32668 /* Breakfast Finder Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1B32472C67B00D32668 /* Breakfast Finder Logo.png */; };
 		844FC1B62472C68300D32668 /* ObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1B52472C68300D32668 /* ObjectDetector.mlmodel */; };
 		844FC1B82472C8A500D32668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1B72472C8A500D32668 /* Main.storyboard */; };
+		84CE04A22495044500FE12BB /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04A12495044500FE12BB /* MasterJournalViewController.swift */; };
+		84CE04E5249505D600FE12BB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E4249505D600FE12BB /* DetailViewController.swift */; };
+		84CE04E82495253C00FE12BB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E72495253C00FE12BB /* CoreDataHelper.swift */; };
+		84CE04EA2495255900FE12BB /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E92495255900FE12BB /* DateHelper.swift */; };
+		84CE04EB24952B8D00FE12BB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E72495253C00FE12BB /* CoreDataHelper.swift */; };
+		84CE04EC24952B9E00FE12BB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E72495253C00FE12BB /* CoreDataHelper.swift */; };
+		84CE04ED24952BAC00FE12BB /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EBF62493CBB300A65C67 /* JournalEntry.swift */; };
+		84CE04EE24952BAD00FE12BB /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EBF62493CBB300A65C67 /* JournalEntry.swift */; };
+		84CE04EF24952DBA00FE12BB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E4249505D600FE12BB /* DetailViewController.swift */; };
+		84CE04F024952DBE00FE12BB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E4249505D600FE12BB /* DetailViewController.swift */; };
+		84CE04F224952E2F00FE12BB /* CreateChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04F124952E2F00FE12BB /* CreateChangeViewController.swift */; };
+		84CE04F324952E7E00FE12BB /* CreateChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04F124952E2F00FE12BB /* CreateChangeViewController.swift */; };
+		84CE04F424952E7F00FE12BB /* CreateChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04F124952E2F00FE12BB /* CreateChangeViewController.swift */; };
+		84CE04F6249530C300FE12BB /* NoteUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04F5249530C300FE12BB /* NoteUITableViewCell.swift */; };
+		84CE057B2495361E00FE12BB /* JournalEntryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE057A2495361E00FE12BB /* JournalEntryStorage.swift */; };
+		84CE057E2495377400FE12BB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84CE057C2495377400FE12BB /* Model.xcdatamodeld */; };
+		84CE057F24953DB100FE12BB /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04A12495044500FE12BB /* MasterJournalViewController.swift */; };
+		84CE058024953DB200FE12BB /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04A12495044500FE12BB /* MasterJournalViewController.swift */; };
+		84CE05812496637C00FE12BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1762472C23600D32668 /* AppDelegate.swift */; };
+		84CE05822496637D00FE12BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1762472C23600D32668 /* AppDelegate.swift */; };
 		84D3262A247B14CC00105B94 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32621247B14CC00105B94 /* DictionaryExtension.swift */; };
 		84D3262B247B14CC00105B94 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32622247B14CC00105B94 /* UIViewControllerExtension.swift */; };
 		84D3262C247B14CC00105B94 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32623247B14CC00105B94 /* KeyboardHandler.swift */; };
@@ -288,6 +309,7 @@
 		4E2510D9248D8669009EFE52 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		4E2510F8248D8A8E009EFE52 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		528F438BEE73F838AD887103 /* Pods-FruitLens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitLens.release.xcconfig"; path = "Target Support Files/Pods-FruitLens/Pods-FruitLens.release.xcconfig"; sourceTree = "<group>"; };
+		8446EBF62493CBB300A65C67 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		844FC1732472C23600D32668 /* FruitLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FC1762472C23600D32668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844FC17F2472C23700D32668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -300,6 +322,14 @@
 		844FC1B32472C67B00D32668 /* Breakfast Finder Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Breakfast Finder Logo.png"; sourceTree = "<group>"; };
 		844FC1B52472C68300D32668 /* ObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetector.mlmodel; sourceTree = "<group>"; };
 		844FC1B72472C8A500D32668 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		84CE04A12495044500FE12BB /* MasterJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterJournalViewController.swift; sourceTree = "<group>"; };
+		84CE04E4249505D600FE12BB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		84CE04E72495253C00FE12BB /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		84CE04E92495255900FE12BB /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		84CE04F124952E2F00FE12BB /* CreateChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChangeViewController.swift; sourceTree = "<group>"; };
+		84CE04F5249530C300FE12BB /* NoteUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUITableViewCell.swift; sourceTree = "<group>"; };
+		84CE057A2495361E00FE12BB /* JournalEntryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryStorage.swift; sourceTree = "<group>"; };
+		84CE057D2495377400FE12BB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		84D32621247B14CC00105B94 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		84D32622247B14CC00105B94 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		84D32623247B14CC00105B94 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
@@ -380,6 +410,7 @@
 		4E0D8AE3248D275700023637 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84CE04852495042900FE12BB /* Journal */,
 				4E2510CF248D5F49009EFE52 /* Auth */,
 				4E0D8AFF248D27B600023637 /* Launch */,
 				4E0D8AFE248D276800023637 /* Recognition */,
@@ -495,7 +526,7 @@
 				84D3261D247B138E00105B94 /* Applications */,
 				84D3261B247B135400105B94 /* DataManagement */,
 				84D3261A247B134C00105B94 /* Services */,
-				84D32619247B134000105B94 /* ObjetModels */,
+				84D32619247B134000105B94 /* ObjectModels */,
 				4E2510B4248D2C71009EFE52 /* Layout */,
 				84D32618247B0DC100105B94 /* PresenterViews */,
 				844FC1B72472C8A500D32668 /* Main.storyboard */,
@@ -515,6 +546,37 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		84CE04852495042900FE12BB /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				84CE057C2495377400FE12BB /* Model.xcdatamodeld */,
+				84CE0579249535F500FE12BB /* Storage */,
+				84CE04A12495044500FE12BB /* MasterJournalViewController.swift */,
+				84CE04E4249505D600FE12BB /* DetailViewController.swift */,
+				84CE04F124952E2F00FE12BB /* CreateChangeViewController.swift */,
+				84CE04F5249530C300FE12BB /* NoteUITableViewCell.swift */,
+				84CE04E6249517FD00FE12BB /* Helpers */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		84CE04E6249517FD00FE12BB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84CE04E72495253C00FE12BB /* CoreDataHelper.swift */,
+				84CE04E92495255900FE12BB /* DateHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		84CE0579249535F500FE12BB /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				84CE057A2495361E00FE12BB /* JournalEntryStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		84D32618247B0DC100105B94 /* PresenterViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,13 +585,14 @@
 			path = PresenterViews;
 			sourceTree = "<group>";
 		};
-		84D32619247B134000105B94 /* ObjetModels */ = {
+		84D32619247B134000105B94 /* ObjectModels */ = {
 			isa = PBXGroup;
 			children = (
 				84D32633247B150F00105B94 /* ObjectUser.swift */,
 				4E2510D9248D8669009EFE52 /* Food.swift */,
+				8446EBF62493CBB300A65C67 /* JournalEntry.swift */,
 			);
-			path = ObjetModels;
+			path = ObjectModels;
 			sourceTree = "<group>";
 		};
 		84D3261A247B134C00105B94 /* Services */ = {
@@ -1026,10 +1089,12 @@
 				84D3262C247B14CC00105B94 /* KeyboardHandler.swift in Sources */,
 				84D3264A247B177200105B94 /* FirestoreService.swift in Sources */,
 				4E2510CC248D4A29009EFE52 /* ProgressCell.swift in Sources */,
+				84CE057E2495377400FE12BB /* Model.xcdatamodeld in Sources */,
 				4E2510B1248D2941009EFE52 /* Config.swift in Sources */,
 				4E2510B9248D2CD5009EFE52 /* PresentMenuAnimator.swift in Sources */,
 				844FC1AA2472C43E00D32668 /* ViewController.swift in Sources */,
 				844FC1772472C23600D32668 /* AppDelegate.swift in Sources */,
+				84CE04A22495044500FE12BB /* MasterJournalViewController.swift in Sources */,
 				4E2510D5248D6456009EFE52 /* SignInController.swift in Sources */,
 				84D3262F247B14CC00105B94 /* EncodableExtension.swift in Sources */,
 				4E2510B7248D2CC1009EFE52 /* Interactor.swift in Sources */,
@@ -1039,29 +1104,36 @@
 				4E2510C1248D2E8A009EFE52 /* LoginController.swift in Sources */,
 				4E2510D1248D5F61009EFE52 /* RegisterController.swift in Sources */,
 				4E2510AD248D286E009EFE52 /* NotificationNames.swift in Sources */,
+				8446EBF72493CBB300A65C67 /* JournalEntry.swift in Sources */,
 				4E2510C5248D3BD5009EFE52 /* CustomTableView.swift in Sources */,
 				4E2510CA248D3E4F009EFE52 /* SettingsCell.swift in Sources */,
 				84D3262B247B14CC00105B94 /* UIViewControllerExtension.swift in Sources */,
 				84D3263A247B167100105B94 /* UserManager.swift in Sources */,
 				4E0D8B01248D27C800023637 /* LaunchRouter.swift in Sources */,
+				84CE04EA2495255900FE12BB /* DateHelper.swift in Sources */,
 				84D32648247B177200105B94 /* FireStorageService.swift in Sources */,
 				84D3262E247B14CC00105B94 /* UIStoryboardExtension.swift in Sources */,
 				4E2510D7248D7DEE009EFE52 /* Database.swift in Sources */,
+				84CE04F224952E2F00FE12BB /* CreateChangeViewController.swift in Sources */,
 				4E2510AF248D2908009EFE52 /* LaunchViewController.swift in Sources */,
 				84D3262A247B14CC00105B94 /* DictionaryExtension.swift in Sources */,
 				84D32631247B14CC00105B94 /* NSObjectExtension.swift in Sources */,
 				84D32630247B14CC00105B94 /* OptionalExtension.swift in Sources */,
 				844FC1AC2472C4F800D32668 /* VisionObjectRecognitionViewController.swift in Sources */,
+				84CE057B2495361E00FE12BB /* JournalEntryStorage.swift in Sources */,
 				4E2510F9248D8A8E009EFE52 /* DateExtension.swift in Sources */,
+				84CE04E82495253C00FE12BB /* CoreDataHelper.swift in Sources */,
 				844FC1B62472C68300D32668 /* ObjectDetector.mlmodel in Sources */,
 				84D3264C247B177200105B94 /* FireCodable.swift in Sources */,
 				4E2510DA248D8669009EFE52 /* Food.swift in Sources */,
 				4E2510BF248D2D4A009EFE52 /* UIViewExtension.swift in Sources */,
 				84D32634247B150F00105B94 /* ObjectUser.swift in Sources */,
+				84CE04E5249505D600FE12BB /* DetailViewController.swift in Sources */,
 				4E2510BB248D2CE2009EFE52 /* DismissMenuAnimator.swift in Sources */,
 				84D32632247B14CC00105B94 /* StringExtension.swift in Sources */,
 				84D32647247B177200105B94 /* ImagePickerService.swift in Sources */,
 				4E0D8B03248D27FB00023637 /* UIWindowExtension.swift in Sources */,
+				84CE04F6249530C300FE12BB /* NoteUITableViewCell.swift in Sources */,
 				4E2510B3248D2C27009EFE52 /* TabBarController.swift in Sources */,
 				84D32649247B177200105B94 /* FirebaseEnums.swift in Sources */,
 				4E2510CE248D4A68009EFE52 /* CustomProgressView.swift in Sources */,
@@ -1073,6 +1145,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CE05812496637C00FE12BB /* AppDelegate.swift in Sources */,
+				84CE04F324952E7E00FE12BB /* CreateChangeViewController.swift in Sources */,
+				84CE04EF24952DBA00FE12BB /* DetailViewController.swift in Sources */,
+				84CE057F24953DB100FE12BB /* MasterJournalViewController.swift in Sources */,
+				84CE04ED24952BAC00FE12BB /* JournalEntry.swift in Sources */,
+				84CE04EB24952B8D00FE12BB /* CoreDataHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,6 +1158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CE05822496637D00FE12BB /* AppDelegate.swift in Sources */,
+				84CE04F424952E7F00FE12BB /* CreateChangeViewController.swift in Sources */,
+				84CE04F024952DBE00FE12BB /* DetailViewController.swift in Sources */,
+				84CE058024953DB200FE12BB /* MasterJournalViewController.swift in Sources */,
+				84CE04EE24952BAD00FE12BB /* JournalEntry.swift in Sources */,
+				84CE04EC24952B9E00FE12BB /* CoreDataHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1220,7 +1304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FruitLens/Preview Content\"";
-				DEVELOPMENT_TEAM = P8P6AFZH78;
+				DEVELOPMENT_TEAM = XG9N63BT3R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FruitLens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1241,7 +1325,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FruitLens/Preview Content\"";
-				DEVELOPMENT_TEAM = P8P6AFZH78;
+				DEVELOPMENT_TEAM = XG9N63BT3R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FruitLens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1379,6 +1463,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84CE057C2495377400FE12BB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84CE057D2495377400FE12BB /* Model.xcdatamodel */,
+			);
+			currentVersion = 84CE057D2495377400FE12BB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 844FC16B2472C23600D32668 /* Project object */;
 }

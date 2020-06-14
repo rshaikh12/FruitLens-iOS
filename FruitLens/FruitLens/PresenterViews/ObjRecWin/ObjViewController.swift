@@ -11,12 +11,13 @@ import UIKit
 import AVFoundation
 import Vision
 
-class ObjViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class ObjViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate {
     
     var bufferSize: CGSize = .zero
     var rootLayer: CALayer! = nil
+    var stillImageOutput = AVCaptureStillImageOutput()
+
     
-    @IBOutlet weak private var previewView: UIView!
     private let session = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer! = nil
     private let videoDataOutput = AVCaptureVideoDataOutput()
@@ -30,8 +31,12 @@ class ObjViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupAVCapture()
+        print("hurray")
     }
+    
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -42,6 +47,15 @@ class ObjViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillDisappear(_animated: Bool){
+        super.viewWillDisappear(animated)
+        self.session.stopRunning()
+    }
+    
+
+    
+
     
     func setupAVCapture() {
         var deviceInput: AVCaptureDeviceInput!
@@ -56,27 +70,31 @@ class ObjViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         }
         
         session.beginConfiguration()
-        session.sessionPreset = .vga640x480 // Model image size is smaller.
-        
+        if session canAddInput(deviceInput){
+        session.addInput(deviceInput)
+        }
+        session.sessionPreset = AVCaptureSessionPresetPhoto//.vga640x480 // Model image size is smaller.
+        session.startRunning()
         // Add a video input
         guard session.canAddInput(deviceInput) else {
             print("Could not add video device input to the session")
             session.commitConfiguration()
             return
         }
-        session.addInput(deviceInput)
-        if session.canAddOutput(videoDataOutput) {
-            session.addOutput(videoDataOutput)
-            // Add a video data output
-            videoDataOutput.alwaysDiscardsLateVideoFrames = true
+        //add Video Output as still Image
+        stillImageOutput.outputSettings = [AVVideoCodecKey:AVVideoCodecJPEG]
+        if session.canAddOutput(stillImageOutput) {
+            session.addOutput(stillImageOutput)
+        }
+        /*videoDataOutput.alwaysDiscardsLateVideoFrames = true
             videoDataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)]
             videoDataOutput.setSampleBufferDelegate(self, queue: videoDataOutputQueue)
         } else {
             print("Could not add video data output to the session")
             session.commitConfiguration()
-            return
-        }
-        let captureConnection = videoDataOutput.connection(with: .video)
+            return*/
+        
+        /*let captureConnection = videoDataOutput.connection(with: .video)
         // Always process the frames
         captureConnection?.isEnabled = true
         do {
@@ -87,18 +105,17 @@ class ObjViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
             videoDevice!.unlockForConfiguration()
         } catch {
             print(error)
-        }
+        }*/
         session.commitConfiguration()
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        rootLayer = previewView.layer
-        previewLayer.frame = rootLayer.bounds
-        rootLayer.addSublayer(previewLayer)
+        let cameraPreview = UIView(frame: CGRectMake(0.0, 0.0, view.bounds.size.width, view.bounds.size.height))
+        cameraPreview.layer.addSublayer(previewLayer)
+        
+        
     }
     
-    func startCaptureSession() {
-        session.startRunning()
-    }
+
     
     // Clean up capture setup
     func teardownAVCapture() {
@@ -109,6 +126,27 @@ class ObjViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
     func captureOutput(_ captureOutput: AVCaptureOutput, didDrop didDropSampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         // print("frame dropped")
     }
+    
+    func savetoCamera(sender: UITapGestureRecognizer){
+        presentViewController(ProfileController, animated: true, completion:nil)
+        if let videoConnection = stillImageOutput.connectionWithMediaType(AVMediaTypeVideo){
+            stillImageOutput.captureStillImageAsynchronousFromConnection(videoConnection){
+                (imageDataSampleBuffer, error) -> Void in
+                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+                UIImageWriteToSavedPhotosAlbum(UIImage(data: imageData), nil, nil, nil)
+            }
+        }
+    }
+    
+    func alertAction(){
+        let alert = UIAltertController(title:"Test", message:"Test", preferredStyle:alert)
+        
+        alert.addAction(UIAlertAction(title:"Ok", style: .default, handler:nil))
+        
+        self.present(alert, animated: true)
+    }
+
+    
     
     public func exifOrientationFromDeviceOrientation() -> CGImagePropertyOrientation {
         let curDeviceOrientation = UIDevice.current.orientation

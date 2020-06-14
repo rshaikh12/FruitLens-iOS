@@ -57,4 +57,12 @@ extension Date {
         return Int64((self.timeIntervalSince1970 * 1000.0).rounded())
     }
     
+    func toSeconds() -> Int64! {
+        return Int64((self.timeIntervalSince1970).rounded())
+    }
+    
+    init(seconds:Int64!) {
+        self = Date(timeIntervalSince1970: TimeInterval(Double.init(seconds)))
+    }
+    
 }

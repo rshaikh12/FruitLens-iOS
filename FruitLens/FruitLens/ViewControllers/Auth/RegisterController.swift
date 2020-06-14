@@ -19,7 +19,11 @@ class RegisterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+
     }
+
+    
     
     @IBAction func submit(_ sender: UIButton) {
         if let name = nameField.text, let email = emailField.text, let password = passwordField.text {
@@ -37,6 +41,9 @@ class RegisterController: UIViewController {
               return
             }
             
+
+
+            
             view.endEditing(true)
             
             let user = ObjectUser()
@@ -53,4 +60,5 @@ class RegisterController: UIViewController {
             }
         }
     }
+    
 }
