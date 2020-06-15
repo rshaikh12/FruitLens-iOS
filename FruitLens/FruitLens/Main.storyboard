@@ -29,6 +29,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="camera.circle" catalog="system"/>
                                 <connections>
+                                    <action selector="captureImageWithSender:" destination="xOp-Az-4uB" eventType="touchUpInside" id="dce-p7-3ib"/>
                                     <action selector="capturePicWith_sender:" destination="xOp-Az-4uB" eventType="touchUpInside" id="2x3-5S-f5u"/>
                                     <action selector="captureWithFunc:" destination="xOp-Az-4uB" eventType="touchUpInside" id="LdM-le-QkY"/>
                                     <segue destination="lHN-jf-H3t" kind="show" identifier="showPreview" id="vVv-0U-LOV"/>
@@ -39,6 +40,7 @@
                         <viewLayoutGuide key="safeArea" id="lZo-r5-zr2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="camera" catalog="system" id="dUB-RA-dRU"/>
+                    <navigationItem key="navigationItem" id="GPe-cK-BvG"/>
                     <connections>
                         <outlet property="previewView" destination="H9R-3B-vFF" id="06O-25-mtH"/>
                     </connections>
@@ -1199,6 +1201,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
+                                    <action selector="addToDatabase" destination="lHN-jf-H3t" eventType="touchUpInside" id="fN7-qO-MTM"/>
                                     <action selector="addToFruitConsumptionWith_sender:" destination="lHN-jf-H3t" eventType="touchUpInside" id="9J7-9e-feJ"/>
                                 </connections>
                             </button>
@@ -1219,6 +1222,10 @@
                                 <rect key="frame" x="20" y="713" width="152" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Retry"/>
+                                <connections>
+                                    <action selector="returnToCameraScreen" destination="lHN-jf-H3t" eventType="touchUpInside" id="mtj-R1-ecn"/>
+                                    <segue destination="xOp-Az-4uB" kind="show" id="mre-8h-IrF"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RIk-Pe-zMF">
                                 <rect key="frame" x="20" y="44" width="374" height="513"/>
@@ -1232,8 +1239,11 @@
                     <navigationItem key="navigationItem" id="W7i-5b-wg6"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="capturedImage" destination="RIk-Pe-zMF" id="CFO-E3-CcI"/>
                         <outlet property="classificationLabel" destination="pMN-wK-sY1" id="7zn-0F-boe"/>
+                        <outlet property="classification_label" destination="pMN-wK-sY1" id="GfJ-KN-74T"/>
                         <outlet property="imageName" destination="RIk-Pe-zMF" id="lnk-gi-lmj"/>
+                        <outlet property="manual_classification" destination="2Kp-8O-hHz" id="pdw-Gg-nVn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bf2-Qf-l7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1510,11 +1520,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="vVv-0U-LOV"/>
         <segue reference="rc3-JX-2en"/>
         <segue reference="hpi-9z-xJ8"/>
-        <segue reference="QC0-kt-8Op"/>
+        <segue reference="FOu-eh-Afq"/>
         <segue reference="2Nc-PO-Wh5"/>
         <segue reference="bvc-tn-QNN"/>
+        <segue reference="mre-8h-IrF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
     <resources>

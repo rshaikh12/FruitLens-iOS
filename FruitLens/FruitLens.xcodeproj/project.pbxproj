@@ -39,7 +39,6 @@
 		844FC1AC2472C4F800D32668 /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1AB2472C4F800D32668 /* VisionObjectRecognitionViewController.swift */; };
 		844FC1B02472C5DE00D32668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1AF2472C5DE00D32668 /* LaunchScreen.storyboard */; };
 		844FC1B42472C67B00D32668 /* Breakfast Finder Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1B32472C67B00D32668 /* Breakfast Finder Logo.png */; };
-		844FC1B62472C68300D32668 /* ObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1B52472C68300D32668 /* ObjectDetector.mlmodel */; };
 		844FC1B82472C8A500D32668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1B72472C8A500D32668 /* Main.storyboard */; };
 		84CE04A22495044500FE12BB /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04A12495044500FE12BB /* MasterJournalViewController.swift */; };
 		84CE04E5249505D600FE12BB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E4249505D600FE12BB /* DetailViewController.swift */; };
@@ -61,6 +60,7 @@
 		84CE058024953DB200FE12BB /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04A12495044500FE12BB /* MasterJournalViewController.swift */; };
 		84CE05812496637C00FE12BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1762472C23600D32668 /* AppDelegate.swift */; };
 		84CE05822496637D00FE12BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1762472C23600D32668 /* AppDelegate.swift */; };
+		84CE05862496C9C600FE12BB /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 84CE05852496C9C600FE12BB /* Resnet50.mlmodel */; };
 		84D3262A247B14CC00105B94 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32621247B14CC00105B94 /* DictionaryExtension.swift */; };
 		84D3262B247B14CC00105B94 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32622247B14CC00105B94 /* UIViewControllerExtension.swift */; };
 		84D3262C247B14CC00105B94 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32623247B14CC00105B94 /* KeyboardHandler.swift */; };
@@ -320,7 +320,6 @@
 		844FC1AB2472C4F800D32668 /* VisionObjectRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionViewController.swift; sourceTree = "<group>"; };
 		844FC1AF2472C5DE00D32668 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844FC1B32472C67B00D32668 /* Breakfast Finder Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Breakfast Finder Logo.png"; sourceTree = "<group>"; };
-		844FC1B52472C68300D32668 /* ObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetector.mlmodel; sourceTree = "<group>"; };
 		844FC1B72472C8A500D32668 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84CE04A12495044500FE12BB /* MasterJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterJournalViewController.swift; sourceTree = "<group>"; };
 		84CE04E4249505D600FE12BB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -330,6 +329,7 @@
 		84CE04F5249530C300FE12BB /* NoteUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUITableViewCell.swift; sourceTree = "<group>"; };
 		84CE057A2495361E00FE12BB /* JournalEntryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryStorage.swift; sourceTree = "<group>"; };
 		84CE057D2495377400FE12BB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		84CE05852496C9C600FE12BB /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = FruitLens/PresenterViews/ObjRecWin/Resnet50.mlmodel; sourceTree = "<group>"; };
 		84D32621247B14CC00105B94 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		84D32622247B14CC00105B94 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		84D32623247B14CC00105B94 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
@@ -500,6 +500,7 @@
 		844FC16A2472C23600D32668 = {
 			isa = PBXGroup;
 			children = (
+				84CE05852496C9C600FE12BB /* Resnet50.mlmodel */,
 				844FC1752472C23600D32668 /* FruitLens */,
 				844FC1742472C23600D32668 /* Products */,
 				D88C82DAA43B55C358B5FF06 /* Pods */,
@@ -531,7 +532,6 @@
 				84D32618247B0DC100105B94 /* PresenterViews */,
 				844FC1B72472C8A500D32668 /* Main.storyboard */,
 				844FC1AF2472C5DE00D32668 /* LaunchScreen.storyboard */,
-				844FC1B52472C68300D32668 /* ObjectDetector.mlmodel */,
 				844FC1B32472C67B00D32668 /* Breakfast Finder Logo.png */,
 				844FC1812472C23700D32668 /* Preview Content */,
 			);
@@ -1084,6 +1084,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CE05862496C9C600FE12BB /* Resnet50.mlmodel in Sources */,
 				4E2510C3248D369F009EFE52 /* ProfileController.swift in Sources */,
 				4E2510BD248D2D0A009EFE52 /* PopupHelper.swift in Sources */,
 				84D3262C247B14CC00105B94 /* KeyboardHandler.swift in Sources */,
@@ -1123,7 +1124,6 @@
 				84CE057B2495361E00FE12BB /* JournalEntryStorage.swift in Sources */,
 				4E2510F9248D8A8E009EFE52 /* DateExtension.swift in Sources */,
 				84CE04E82495253C00FE12BB /* CoreDataHelper.swift in Sources */,
-				844FC1B62472C68300D32668 /* ObjectDetector.mlmodel in Sources */,
 				84D3264C247B177200105B94 /* FireCodable.swift in Sources */,
 				4E2510DA248D8669009EFE52 /* Food.swift in Sources */,
 				4E2510BF248D2D4A009EFE52 /* UIViewExtension.swift in Sources */,

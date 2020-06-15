@@ -14,6 +14,8 @@ import Vision
 class VisionObjectRecognitionViewController: ObjViewController {
     
     private var detectionOverlay: CALayer! = nil
+
+
     
     // Vision parts
     private var requests = [VNRequest]()
@@ -24,12 +26,11 @@ class VisionObjectRecognitionViewController: ObjViewController {
         // Setup Vision parts
         let error: NSError! = nil
         
-        guard let modelURL = Bundle.main.url(forResource: "ObjectDetector", withExtension: "mlmodelc") else {
+        guard let model = VNCoreMLModel(for: Resnet50().model) else {
             return NSError(domain: "VisionObjectRecognitionViewController", code: -1, userInfo: [NSLocalizedDescriptionKey: "Model file is missing"])
         }
         do {
-            let visionModel = try VNCoreMLModel(for: MLModel(contentsOf: modelURL))
-            let objectRecognition = VNCoreMLRequest(model: visionModel, completionHandler: { (request, error) in
+            let objectRecognition = VNCoreMLRequest(model: model, completionHandler: { (request, error) in
                 DispatchQueue.main.async(execute: {
                     // perform all the UI updates on the main queue
                     if let results = request.results {
@@ -70,6 +71,11 @@ class VisionObjectRecognitionViewController: ObjViewController {
         self.updateLayerGeometry()
         CATransaction.commit()
     }
+    
+    @IBAction func captureImage(sender: UIButton){
+        performSegue(withIdentifier: "showPreview", sender:nil)
+    }
+
     
     override func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {

@@ -33,7 +33,7 @@ class ObjViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferD
         super.viewDidLoad()
 
         setupAVCapture()
-        print("hurray")
+        
     }
     
 
