@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  FruitLens
 //
-//  Created by Christoph Weber on 18.05.20.
-//  Copyright © 2020 ChristophWeber. All rights reserved.
+//  Created by Emre Can Bolat on 18.05.20.
+//  Copyright © 2020 Emre Can Bolat. All rights reserved.
 //
 
 import UIKit

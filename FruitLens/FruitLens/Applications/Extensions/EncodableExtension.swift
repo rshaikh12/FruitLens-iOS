@@ -10,8 +10,8 @@
 import Foundation
 
 extension Encodable {
-  var values: [String: Any]? {
+  var values: [String: Float64]? {
     guard let data = try? JSONEncoder().encode(self) else { return nil }
-    return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
+    return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Float64] }
   }
 }

@@ -8,11 +8,10 @@
 
 
 import Foundation
-
+//firestore collection enumerating
 public enum FirestoreCollectionReference: String {
   case users = "Users"
-  case conversations = "Conversations"
-  //case messages = "Messages"
+  case objrecwin = "objrecwin"
 }
 
 public enum FirestoreResponse {

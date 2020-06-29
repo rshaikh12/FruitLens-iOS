@@ -9,7 +9,7 @@
 
 import UIKit
 import ALLoadingView
-
+//allloadingview 
 class ThemeService {
     
     //ColorPicker Ralf Ebert

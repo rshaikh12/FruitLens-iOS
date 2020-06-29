@@ -5,7 +5,7 @@
 //  Created by Christoph Weber on 24.05.20.
 //  Copyright © 2020 Christoph. All rights reserved.
 //
-
+//user authetification in firebase
 import FirebaseAuth
 
 //UserManager for ObjectUser
@@ -24,7 +24,7 @@ class UserManager {
       completion(users.first)
     })
   }
-  
+  //firebase login
   func login(user: ObjectUser, completion: @escaping CompletionObject<(AuthDataResult?, FirestoreResponse)>) {
     guard let email = user.email, let password = user.password else { completion((nil, .failure)); return }
     Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
@@ -35,7 +35,7 @@ class UserManager {
       completion((nil, .failure))
     }
   }
-  
+  //firebase register
   func register(user: ObjectUser, completion: @escaping CompletionObject<FirestoreResponse>) {
     guard let email = user.email, let password = user.password else { completion(.failure); return }
     Auth.auth().createUser(withEmail: email, password: password) {[weak self] (reponse, error) in
@@ -58,13 +58,13 @@ class UserManager {
       }
     }
   }
-  
+  //contacts managing
   func contacts(_ completion: @escaping CompletionObject<[ObjectUser]>) {
     FirestoreService().objects(ObjectUser.self, reference: .init(location: .users)) { results in
       completion(results)
     }
   }
-  
+  //userDate in firebase
   func userData(for id: String, _ completion: @escaping CompletionObject<ObjectUser?>) {
     let query = FirestoreService.DataQuery(key: "id", value: id, mode: .equal)
     FirestoreService().objects(ObjectUser.self, reference: .init(location: .users), parameter: query) { users in

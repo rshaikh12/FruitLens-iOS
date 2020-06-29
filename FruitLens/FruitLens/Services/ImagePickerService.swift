@@ -11,6 +11,8 @@ import UIKit
 
 import Photos
 
+//imagepicker service
+
 class ImagePickerService: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
   private lazy var picker: UIImagePickerController = {

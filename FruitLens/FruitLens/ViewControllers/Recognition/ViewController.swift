@@ -15,6 +15,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var bufferSize: CGSize = .zero
     var rootLayer: CALayer! = nil
     
+    @IBOutlet weak var eatButton: UIButton!
+    @IBAction func eatFruit(_ sender: UIButton){
+        //guard let vc: ViewController = UIStoryboard.initial(storyboard: storyboard)
+    }
+    
+    
+    
     @IBOutlet weak private var previewView: UIView!
     private let session = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer! = nil
@@ -29,6 +36,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAVCapture()
+        eatButton.layer.zPosition=10
     }
     
     override func didReceiveMemoryWarning() {

@@ -21,13 +21,13 @@
                         <viewControllerLayoutGuide type="bottom" id="WIf-de-cGp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="H9R-3B-vFF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOk-BJ-fQs">
-                                <rect key="frame" x="150" y="648" width="114" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOk-BJ-fQs" userLabel="eatButton">
+                                <rect key="frame" x="149" y="650" width="116" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="camera.circle" catalog="system"/>
+                                <state key="normal" backgroundImage="FruitLens.png"/>
                                 <connections>
                                     <action selector="captureImageWithSender:" destination="xOp-Az-4uB" eventType="touchUpInside" id="dce-p7-3ib"/>
                                     <action selector="capturePicWith_sender:" destination="xOp-Az-4uB" eventType="touchUpInside" id="2x3-5S-f5u"/>
@@ -42,6 +42,7 @@
                     <tabBarItem key="tabBarItem" title="" image="camera" catalog="system" id="dUB-RA-dRU"/>
                     <navigationItem key="navigationItem" id="GPe-cK-BvG"/>
                     <connections>
+                        <outlet property="eatButton" destination="WOk-BJ-fQs" id="3oj-Tj-E6Y"/>
                         <outlet property="previewView" destination="H9R-3B-vFF" id="06O-25-mtH"/>
                     </connections>
                 </viewController>
@@ -1193,10 +1194,10 @@
             <objects>
                 <viewController id="lHN-jf-H3t" customClass="ClassifiedImageViewController" customModule="FruitLens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4HU-ht-MBj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnJ-ua-QaB">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnJ-ua-QaB" userLabel="addButton">
                                 <rect key="frame" x="243" y="713" width="151" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
@@ -1205,20 +1206,20 @@
                                     <action selector="addToFruitConsumptionWith_sender:" destination="lHN-jf-H3t" eventType="touchUpInside" id="9J7-9e-feJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMN-wK-sY1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMN-wK-sY1" userLabel="classificationLabel">
                                 <rect key="frame" x="20" y="552" width="374" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Kp-8O-hHz">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Kp-8O-hHz" userLabel="manualClassification">
                                 <rect key="frame" x="20" y="641" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSF-gx-0tb">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSF-gx-0tb" userLabel="retryButton">
                                 <rect key="frame" x="20" y="713" width="152" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Retry"/>
@@ -1520,19 +1521,18 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vVv-0U-LOV"/>
         <segue reference="rc3-JX-2en"/>
         <segue reference="hpi-9z-xJ8"/>
         <segue reference="FOu-eh-Afq"/>
         <segue reference="2Nc-PO-Wh5"/>
-        <segue reference="bvc-tn-QNN"/>
+        <segue reference="0hy-PJ-X2L"/>
         <segue reference="mre-8h-IrF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
     <resources>
+        <image name="FruitLens.png" width="1024" height="1024"/>
         <image name="book.fill" catalog="system" width="128" height="100"/>
         <image name="camera" catalog="system" width="128" height="96"/>
-        <image name="camera.circle" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="profilepic" width="2048" height="1290"/>
         <image name="settings-icon" width="30" height="30"/>

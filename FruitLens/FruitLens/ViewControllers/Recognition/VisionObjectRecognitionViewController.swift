@@ -14,7 +14,8 @@ import Vision
 class VisionObjectRecognitionViewController: ViewController {
     
     private var detectionOverlay: CALayer! = nil
-    
+
+        
     // Vision parts
     private var requests = [VNRequest]()
     
@@ -55,12 +56,24 @@ class VisionObjectRecognitionViewController: ViewController {
             // Select only the label with the highest confidence.
             let topLabelObservation = objectObservation.labels[0]
             let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
-            
             let shapeLayer = self.createRoundedRectLayerWithBounds(objectBounds)
+
+
+            //dummy dict as database substitute - to be changed
+            let dictionary: [String?: Float64] = ["Banana": 123.0, "Egg":12.0]
+            
+            var fructose: Float64? = 0.0
+            for fruit in dictionary.keys {
+                if fruit == topLabelObservation.identifier{
+                    fructose = dictionary[topLabelObservation.identifier]
+                }
+            }
+            
             
             let textLayer = self.createTextSubLayerInBounds(objectBounds,
                                                             identifier: topLabelObservation.identifier,
-                                                            confidence: topLabelObservation.confidence)
+                                                            confidence: topLabelObservation.confidence,
+                                                            fructose: fructose ?? 0.0)
             shapeLayer.addSublayer(textLayer)
             detectionOverlay.addSublayer(shapeLayer)
         }
@@ -129,11 +142,11 @@ class VisionObjectRecognitionViewController: ViewController {
         
     }
     
-    func createTextSubLayerInBounds(_ bounds: CGRect, identifier: String, confidence: VNConfidence) -> CATextLayer {
+    func createTextSubLayerInBounds(_ bounds: CGRect, identifier: String, confidence: VNConfidence, fructose: Float64) -> CATextLayer {
         let textLayer = CATextLayer()
         textLayer.name = "Object Label"
-        let formattedString = NSMutableAttributedString(string: String(format: "\(identifier)\nConfidence:  %.2f", confidence))
-        let largeFont = UIFont(name: "Helvetica", size: 24.0)!
+        let formattedString = NSMutableAttributedString(string: String(format: "\(identifier)\nConfidence:  %.2f\nFructose:  %.2f ", confidence, fructose))
+        let largeFont = UIFont(name: "Helvetica", size: 40.0)!
         formattedString.addAttributes([NSAttributedString.Key.font: largeFont], range: NSRange(location: 0, length: identifier.count))
         textLayer.string = formattedString
         textLayer.bounds = CGRect(x: 0, y: 0, width: bounds.size.height - 10, height: bounds.size.width - 10)

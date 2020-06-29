@@ -10,7 +10,7 @@
 //possible storyboards enumerating
 import UIKit
 
-extension UIStoryboard {
+/*extension UIStoryboard {
   
   class func controller<T: UIViewController>(storyboard: StoryboardEnum) -> T {
     return UIStoryboard(name: storyboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: T.className) as! T
@@ -22,10 +22,11 @@ extension UIStoryboard {
   
   enum StoryboardEnum: String {
     case auth = "Auth"
-    case objrecwin = "Objrecwin"
+    case objrecwin = "objrecwin"
 
     //case profile = "Profile"
     //case previews = "Previews"
     
   }
 }
+*/
