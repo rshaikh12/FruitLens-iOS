@@ -37,6 +37,7 @@
 		4E2510DA248D8669009EFE52 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510D9248D8669009EFE52 /* Food.swift */; };
 		4E2510F9248D8A8E009EFE52 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510F8248D8A8E009EFE52 /* DateExtension.swift */; };
 		8416A37924A0A804006BB7F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416A35D24A0A804006BB7F9 /* LaunchScreen.storyboard */; };
+		8434E51C24B27ED900783AB8 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434E51B24B27ED900783AB8 /* SplitViewController.swift */; };
 		8446EBF72493CBB300A65C67 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EBF62493CBB300A65C67 /* JournalEntry.swift */; };
 		844FC1772472C23600D32668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1762472C23600D32668 /* AppDelegate.swift */; };
 		844FC1802472C23700D32668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FC17F2472C23700D32668 /* Assets.xcassets */; };
@@ -318,6 +319,7 @@
 		4E2510F8248D8A8E009EFE52 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		528F438BEE73F838AD887103 /* Pods-FruitLens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruitLens.release.xcconfig"; path = "Target Support Files/Pods-FruitLens/Pods-FruitLens.release.xcconfig"; sourceTree = "<group>"; };
 		8416A35D24A0A804006BB7F9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8434E51B24B27ED900783AB8 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		8446EBF62493CBB300A65C67 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		844FC1732472C23600D32668 /* FruitLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FC1762472C23600D32668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 				84CE0579249535F500FE12BB /* Storage */,
 				84CE04A12495044500FE12BB /* MasterJournalViewController.swift */,
 				84CE04E4249505D600FE12BB /* DetailViewController.swift */,
+				8434E51B24B27ED900783AB8 /* SplitViewController.swift */,
 				84CE04F124952E2F00FE12BB /* CreateChangeViewController.swift */,
 				84CE04F5249530C300FE12BB /* NoteUITableViewCell.swift */,
 				84CE04E6249517FD00FE12BB /* Helpers */,
@@ -1127,6 +1130,7 @@
 				84CE04F224952E2F00FE12BB /* CreateChangeViewController.swift in Sources */,
 				4E15ACA524B24B8300E962FE /* MobileNet.mlmodel in Sources */,
 				4E2510AF248D2908009EFE52 /* LaunchViewController.swift in Sources */,
+				8434E51C24B27ED900783AB8 /* SplitViewController.swift in Sources */,
 				84D3262A247B14CC00105B94 /* DictionaryExtension.swift in Sources */,
 				84D32631247B14CC00105B94 /* NSObjectExtension.swift in Sources */,
 				84D32630247B14CC00105B94 /* OptionalExtension.swift in Sources */,
@@ -1316,7 +1320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FruitLens/Preview Content\"";
-				DEVELOPMENT_TEAM = P8P6AFZH78;
+				DEVELOPMENT_TEAM = XG9N63BT3R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FruitLens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1337,7 +1341,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FruitLens/Preview Content\"";
-				DEVELOPMENT_TEAM = P8P6AFZH78;
+				DEVELOPMENT_TEAM = XG9N63BT3R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FruitLens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
