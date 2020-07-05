@@ -20,8 +20,19 @@ class ClassifiedImageViewController: VisionObjectRecognitionViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var retryButton: UIButton!
     
-    @IBAction func addToDatabase(_ sender: UIButton) {
-        //todo
+    public var food: (String, Float64, UIImage?)?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let food = self.food {
+            self.classificationLabel.text = food.0
+        }
+    }
+    
+    @IBAction func eatFood(_ sender: UIButton) {
+        DatabaseInserter.addFood(name: food!.0, fructoseValue: food!.1)
+        self.dismiss(animated: true)
     }
     
     @IBAction func retunToCameraScreen(_ sender: UIButton) {

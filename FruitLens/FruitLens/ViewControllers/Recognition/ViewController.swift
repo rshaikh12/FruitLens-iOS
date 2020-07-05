@@ -34,8 +34,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAVCapture()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupAVCapture()
         if let eatButton = eatButton {
-            //eatButton.layer.zPosition = 10
+            eatButton.layer.zPosition = 10
         }
     }
     

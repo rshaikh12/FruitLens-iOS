@@ -10,7 +10,7 @@ import GRDB
 
 struct DatabaseInserter {
     
-    static func addFood(name: String, fructoseValue: Int64) {
+    static func addFood(name: String, fructoseValue: Float64) {
         let food = Food(name: name, fructose_value: fructoseValue)
         do {
             try database.write { db in

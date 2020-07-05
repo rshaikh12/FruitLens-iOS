@@ -14,8 +14,7 @@ import Vision
 class VisionObjectRecognitionViewController: ViewController {
     
     private var detectionOverlay: CALayer! = nil
-        
-    // Vision parts
+    private var detectedFood: (String, Float64, UIImage?)?
     private var requests = [VNRequest]()
     
     @discardableResult
@@ -23,7 +22,7 @@ class VisionObjectRecognitionViewController: ViewController {
         // Setup Vision parts
         let error: NSError! = nil
         
-        guard let modelURL = Bundle.main.url(forResource: "ObjectDetector", withExtension: "mlmodel", subdirectory: "Models") else {
+        guard let modelURL = Bundle.main.url(forResource: "ObjectDetector", withExtension: "mlmodelc") else {
             print("Model file is missing")
             return NSError(domain: "VisionObjectRecognitionViewController", code: -1, userInfo: [NSLocalizedDescriptionKey: "Model file is missing"])
         }
@@ -49,10 +48,15 @@ class VisionObjectRecognitionViewController: ViewController {
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
         detectionOverlay.sublayers = nil // remove all the old recognized objects
+        
+        if let eatButton = eatButton {
+            eatButton.isHidden = true
+        }
         for observation in results where observation is VNRecognizedObjectObservation {
             guard let objectObservation = observation as? VNRecognizedObjectObservation else {
                 continue
             }
+            
             // Select only the label with the highest confidence.
             let topLabelObservation = objectObservation.labels[0]
             let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
@@ -63,9 +67,12 @@ class VisionObjectRecognitionViewController: ViewController {
             let dictionary: [String?: Float64] = ["Banana": 123.0, "Egg":12.0]
             
             var fructose: Float64? = 0.0
+            var existing = false
             for fruit in dictionary.keys {
                 if fruit == topLabelObservation.identifier{
                     fructose = dictionary[topLabelObservation.identifier]
+                    existing = true
+                    self.detectedFood = (topLabelObservation.identifier, fructose!, nil)
                 }
             }
             
@@ -75,6 +82,9 @@ class VisionObjectRecognitionViewController: ViewController {
                                                             fructose: fructose ?? 0.0)
             shapeLayer.addSublayer(textLayer)
             detectionOverlay.addSublayer(shapeLayer)
+            if let eatButton = eatButton {
+                eatButton.isHidden = !existing
+            }
         }
         self.updateLayerGeometry()
         CATransaction.commit()
@@ -108,6 +118,10 @@ class VisionObjectRecognitionViewController: ViewController {
     }
     
     func setupLayers() {
+        if let detectionOverlay = detectionOverlay {
+            detectionOverlay.removeFromSuperlayer()
+        }
+
         detectionOverlay = CALayer() // container layer that has all the renderings of the observations
         detectionOverlay.name = "DetectionOverlay"
         detectionOverlay.bounds = CGRect(x: 0.0,
@@ -170,6 +184,14 @@ class VisionObjectRecognitionViewController: ViewController {
         shapeLayer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 0.2, 0.4])
         shapeLayer.cornerRadius = 7
         return shapeLayer
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPreview" {
+            if let destination = segue.destination as? ClassifiedImageViewController {
+                destination.food = self.detectedFood
+            }
+        }
     }
     
 }

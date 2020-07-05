@@ -13,7 +13,7 @@ class Food: Record {
     var id: Int64?
     var name: String
     var timestamp: Int64
-    var fructose_value: Int64
+    var fructose_value: Float64
     
     override class var databaseTableName: String {
         return "processed_foods"
@@ -32,10 +32,10 @@ class Food: Record {
         super.init(row: row)
     }
     
-    init(name: String, fructose_value: Int64) {
+    init(name: String, fructose_value: Float64) {
         self.name = name
         self.fructose_value = fructose_value
-        self.timestamp = Int64(Date().timeIntervalSince1970)
+        self.timestamp = Int64(Date().millisecondsSince1970)
         super.init()
 
     }

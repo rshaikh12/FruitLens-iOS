@@ -10,6 +10,10 @@
 		4E0D8B01248D27C800023637 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D8B00248D27C800023637 /* LaunchRouter.swift */; };
 		4E0D8B03248D27FB00023637 /* UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D8B02248D27FB00023637 /* UIWindowExtension.swift */; };
 		4E15AC8E24B22F4E00E962FE /* DatabaseInserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15AC8D24B22F4E00E962FE /* DatabaseInserter.swift */; };
+		4E15ACA524B24B8300E962FE /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACA124B24B8300E962FE /* MobileNet.mlmodel */; };
+		4E15ACA724B24B8300E962FE /* fructose.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E15ACA324B24B8300E962FE /* fructose.json */; };
+		4E15ACA824B24B8300E962FE /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACA424B24B8300E962FE /* Resnet50.mlmodel */; };
+		4E15ACAA24B24C1D00E962FE /* ObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4E15ACA924B24C1D00E962FE /* ObjectDetector.mlmodel */; };
 		4E2510AD248D286E009EFE52 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510AC248D286E009EFE52 /* NotificationNames.swift */; };
 		4E2510AF248D2908009EFE52 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510AE248D2908009EFE52 /* LaunchViewController.swift */; };
 		4E2510B1248D2941009EFE52 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510B0248D2941009EFE52 /* Config.swift */; };
@@ -41,7 +45,6 @@
 		844FC1AC2472C4F800D32668 /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1AB2472C4F800D32668 /* VisionObjectRecognitionViewController.swift */; };
 		84517FA924A9ED240043B2BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84517FA824A9ED240043B2BA /* Main.storyboard */; };
 		84517FAC24AA017D0043B2BA /* ClassifiedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84517FAB24AA017D0043B2BA /* ClassifiedImageViewController.swift */; };
-		845576C824A0CFDB00EDCEEA /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 845576C724A0CFDA00EDCEEA /* Models */; };
 		84CE04A22495044500FE12BB /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04A12495044500FE12BB /* MasterJournalViewController.swift */; };
 		84CE04E5249505D600FE12BB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E4249505D600FE12BB /* DetailViewController.swift */; };
 		84CE04E82495253C00FE12BB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E72495253C00FE12BB /* CoreDataHelper.swift */; };
@@ -287,6 +290,10 @@
 		4E0D8B00248D27C800023637 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
 		4E0D8B02248D27FB00023637 /* UIWindowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtension.swift; sourceTree = "<group>"; };
 		4E15AC8D24B22F4E00E962FE /* DatabaseInserter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInserter.swift; sourceTree = "<group>"; };
+		4E15ACA124B24B8300E962FE /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		4E15ACA324B24B8300E962FE /* fructose.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fructose.json; sourceTree = "<group>"; };
+		4E15ACA424B24B8300E962FE /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		4E15ACA924B24C1D00E962FE /* ObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetector.mlmodel; sourceTree = "<group>"; };
 		4E2510AC248D286E009EFE52 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		4E2510AE248D2908009EFE52 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		4E2510B0248D2941009EFE52 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -322,7 +329,6 @@
 		844FC1AB2472C4F800D32668 /* VisionObjectRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionViewController.swift; sourceTree = "<group>"; };
 		84517FA824A9ED240043B2BA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84517FAB24AA017D0043B2BA /* ClassifiedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedImageViewController.swift; sourceTree = "<group>"; };
-		845576C724A0CFDA00EDCEEA /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		84CE04A12495044500FE12BB /* MasterJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterJournalViewController.swift; sourceTree = "<group>"; };
 		84CE04E4249505D600FE12BB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		84CE04E72495253C00FE12BB /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
@@ -448,6 +454,16 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		4E15AC9024B249E700E962FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E15ACA324B24B8300E962FE /* fructose.json */,
+				4E15ACA124B24B8300E962FE /* MobileNet.mlmodel */,
+				4E15ACA424B24B8300E962FE /* Resnet50.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4E2510B4248D2C71009EFE52 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,7 +537,8 @@
 		844FC1752472C23600D32668 /* FruitLens */ = {
 			isa = PBXGroup;
 			children = (
-				845576C724A0CFDA00EDCEEA /* Models */,
+				4E15ACA924B24C1D00E962FE /* ObjectDetector.mlmodel */,
+				4E15AC9024B249E700E962FE /* Models */,
 				4E2510D2248D6356009EFE52 /* GoogleService-Info.plist */,
 				844FC17F2472C23700D32668 /* Assets.xcassets */,
 				4E0D8AE3248D275700023637 /* ViewControllers */,
@@ -977,10 +994,10 @@
 			files = (
 				84D326BB247B1A8700105B94 /* nanopb in Resources */,
 				844FC1832472C23700D32668 /* Preview Assets.xcassets in Resources */,
+				4E15ACA724B24B8300E962FE /* fructose.json in Resources */,
 				84D326C9247B1A8700105B94 /* FirebaseCore in Resources */,
 				84D326BF247B1A8700105B94 /* Headers in Resources */,
 				84D326B4247B1A8700105B94 /* FirebaseInstallations in Resources */,
-				845576C824A0CFDB00EDCEEA /* Models in Resources */,
 				4E2510D3248D6356009EFE52 /* GoogleService-Info.plist in Resources */,
 				84D326B9247B1A8700105B94 /* leveldb-library in Resources */,
 				84D326C6247B1A8700105B94 /* ALLoadingView in Resources */,
@@ -1075,6 +1092,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E15ACA824B24B8300E962FE /* Resnet50.mlmodel in Sources */,
 				4E2510C3248D369F009EFE52 /* ProfileController.swift in Sources */,
 				4E2510BD248D2D0A009EFE52 /* PopupHelper.swift in Sources */,
 				4E15AC8E24B22F4E00E962FE /* DatabaseInserter.swift in Sources */,
@@ -1107,6 +1125,7 @@
 				84D3262E247B14CC00105B94 /* UIStoryboardExtension.swift in Sources */,
 				4E2510D7248D7DEE009EFE52 /* Database.swift in Sources */,
 				84CE04F224952E2F00FE12BB /* CreateChangeViewController.swift in Sources */,
+				4E15ACA524B24B8300E962FE /* MobileNet.mlmodel in Sources */,
 				4E2510AF248D2908009EFE52 /* LaunchViewController.swift in Sources */,
 				84D3262A247B14CC00105B94 /* DictionaryExtension.swift in Sources */,
 				84D32631247B14CC00105B94 /* NSObjectExtension.swift in Sources */,
@@ -1116,6 +1135,7 @@
 				4E2510F9248D8A8E009EFE52 /* DateExtension.swift in Sources */,
 				84CE04E82495253C00FE12BB /* CoreDataHelper.swift in Sources */,
 				84D3264C247B177200105B94 /* FireCodable.swift in Sources */,
+				4E15ACAA24B24C1D00E962FE /* ObjectDetector.mlmodel in Sources */,
 				4E2510DA248D8669009EFE52 /* Food.swift in Sources */,
 				4E2510BF248D2D4A009EFE52 /* UIViewExtension.swift in Sources */,
 				84D32634247B150F00105B94 /* ObjectUser.swift in Sources */,

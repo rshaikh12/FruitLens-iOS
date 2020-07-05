@@ -954,6 +954,9 @@
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Md1-pY-caE" kind="show" id="MSX-Q9-bUd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.5568627451" green="0.094117647060000004" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1157,6 +1160,9 @@
                                         <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="8kI-qw-G5T" kind="show" id="JIC-ek-7au"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.5568627451" green="0.094117647060000004" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1199,8 +1205,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="addToDatabase" destination="lHN-jf-H3t" eventType="touchUpInside" id="fN7-qO-MTM"/>
-                                    <action selector="addToFruitConsumptionWith_sender:" destination="lHN-jf-H3t" eventType="touchUpInside" id="9J7-9e-feJ"/>
+                                    <action selector="eatFood:" destination="lHN-jf-H3t" eventType="touchUpInside" id="W9p-kg-d8T"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMN-wK-sY1" userLabel="classificationLabel">
@@ -1520,7 +1525,9 @@
         <segue reference="rc3-JX-2en"/>
         <segue reference="hpi-9z-xJ8"/>
         <segue reference="FOu-eh-Afq"/>
-        <segue reference="2Nc-PO-Wh5"/>
+        <segue reference="MSX-Q9-bUd"/>
+        <segue reference="JIC-ek-7au"/>
+        <segue reference="T9d-Dk-Ab3"/>
         <segue reference="0hy-PJ-X2L"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>

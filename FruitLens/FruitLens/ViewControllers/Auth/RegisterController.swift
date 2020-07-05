@@ -52,7 +52,7 @@ class RegisterController: UIViewController {
               switch response {
                 case .failure: self?.showAlert()
                 case .success:
-                    print(response)
+                    self?.dismiss(animated: true, completion: nil)
               }
             }
         }

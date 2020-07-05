@@ -32,7 +32,7 @@ class ProfileController: UIViewController {
     @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var profileHeaderConstant: NSLayoutConstraint!
     
-    var processedFoods: [Food] = Food.getAll()
+    var processedFoods: [Food] = []
     var processedFoodValues: [([Food], Int)] = []
     
     override func viewDidLoad() {
@@ -42,12 +42,9 @@ class ProfileController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-        
         self.profileName.text = Config.currentUser?.name ?? Config.currentUser?.email
         buildValues()
         // Config.currentUser?.setImageForUser(self.profilePicture)
-        
-        // DatabaseInserter.addFood(name: "Banana", fructoseValue: 235)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -71,6 +68,8 @@ class ProfileController: UIViewController {
     }
     
     func buildValues() {
+        self.processedFoods = Food.getAll()
+        
         let today = Date()
         
         let yearValues: [Food] = self.processedFoods.filter { (food) -> Bool in
@@ -100,6 +99,9 @@ class ProfileController: UIViewController {
             ( yearValues, yearValues.reduce(0) {res, food in res + Int(food.fructose_value)} ),
             ( processedFoods, processedFoods.reduce(0) {res, food in res + Int(food.fructose_value)} ),
         ]
+        if let profileTable = profileTable {
+            profileTable.reloadData()
+        }
     }
 }
 
