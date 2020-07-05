@@ -56,7 +56,6 @@ class SignInController: UIViewController {
                     Config.setCurrentUser(user: user)
                     self?.router?.routeToMain()
                 }
-
               }
             }
         }

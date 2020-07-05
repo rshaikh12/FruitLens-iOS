@@ -24,7 +24,6 @@ class RegisterController: UIViewController {
     }
 
     
-    
     @IBAction func submit(_ sender: UIButton) {
         if let name = nameField.text, let email = emailField.text, let password = passwordField.text {
             
@@ -41,9 +40,6 @@ class RegisterController: UIViewController {
               return
             }
             
-
-
-            
             view.endEditing(true)
             
             let user = ObjectUser()
@@ -55,7 +51,8 @@ class RegisterController: UIViewController {
               ThemeService.showLoading(false)
               switch response {
                 case .failure: self?.showAlert()
-                case .success: self?.dismiss(animated: true, completion: nil)
+                case .success:
+                    print(response)
               }
             }
         }

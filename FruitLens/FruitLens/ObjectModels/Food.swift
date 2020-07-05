@@ -10,7 +10,7 @@ import GRDB
 
 class Food: Record {
 
-    var id: Int64
+    var id: Int64?
     var name: String
     var timestamp: Int64
     var fructose_value: Int64
@@ -30,6 +30,14 @@ class Food: Record {
         fructose_value = row[Columns.fructose_value]
         
         super.init(row: row)
+    }
+    
+    init(name: String, fructose_value: Int64) {
+        self.name = name
+        self.fructose_value = fructose_value
+        self.timestamp = Int64(Date().timeIntervalSince1970)
+        super.init()
+
     }
     
     override func encode(to container: inout PersistenceContainer) {
@@ -54,4 +62,6 @@ class Food: Record {
         }
 
     }
+
+    
 }

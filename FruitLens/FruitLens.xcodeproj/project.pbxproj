@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E0D8B01248D27C800023637 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D8B00248D27C800023637 /* LaunchRouter.swift */; };
 		4E0D8B03248D27FB00023637 /* UIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0D8B02248D27FB00023637 /* UIWindowExtension.swift */; };
+		4E15AC8E24B22F4E00E962FE /* DatabaseInserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E15AC8D24B22F4E00E962FE /* DatabaseInserter.swift */; };
 		4E2510AD248D286E009EFE52 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510AC248D286E009EFE52 /* NotificationNames.swift */; };
 		4E2510AF248D2908009EFE52 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510AE248D2908009EFE52 /* LaunchViewController.swift */; };
 		4E2510B1248D2941009EFE52 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2510B0248D2941009EFE52 /* Config.swift */; };
@@ -285,6 +286,7 @@
 		3F248B9800CC088FFF395890 /* Pods_FruitLens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruitLens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0D8B00248D27C800023637 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
 		4E0D8B02248D27FB00023637 /* UIWindowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowExtension.swift; sourceTree = "<group>"; };
+		4E15AC8D24B22F4E00E962FE /* DatabaseInserter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInserter.swift; sourceTree = "<group>"; };
 		4E2510AC248D286E009EFE52 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		4E2510AE248D2908009EFE52 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		4E2510B0248D2941009EFE52 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -602,6 +604,7 @@
 			children = (
 				84D32639247B167100105B94 /* UserManager.swift */,
 				4E2510D6248D7DEE009EFE52 /* Database.swift */,
+				4E15AC8D24B22F4E00E962FE /* DatabaseInserter.swift */,
 			);
 			path = DataManagement;
 			sourceTree = "<group>";
@@ -1074,6 +1077,7 @@
 			files = (
 				4E2510C3248D369F009EFE52 /* ProfileController.swift in Sources */,
 				4E2510BD248D2D0A009EFE52 /* PopupHelper.swift in Sources */,
+				4E15AC8E24B22F4E00E962FE /* DatabaseInserter.swift in Sources */,
 				84D3262C247B14CC00105B94 /* KeyboardHandler.swift in Sources */,
 				84D3264A247B177200105B94 /* FirestoreService.swift in Sources */,
 				4E2510CC248D4A29009EFE52 /* ProgressCell.swift in Sources */,

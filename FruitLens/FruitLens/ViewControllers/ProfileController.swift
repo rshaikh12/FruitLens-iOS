@@ -37,7 +37,6 @@ class ProfileController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buildValues()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,7 +44,10 @@ class ProfileController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         
         self.profileName.text = Config.currentUser?.name ?? Config.currentUser?.email
+        buildValues()
         // Config.currentUser?.setImageForUser(self.profilePicture)
+        
+        // DatabaseInserter.addFood(name: "Banana", fructoseValue: 235)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
