@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>558207411797-ctv17b3a3mpab0vivdjqtcjtahmp0ve0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.558207411797-ctv17b3a3mpab0vivdjqtcjtahmp0ve0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCM5k140PI7TrY2oF_TusNfMSXFk1FbzFo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>558207411797</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>piose.eleven</string>
+	<key>PROJECT_ID</key>
+	<string>fruitlense</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fruitlense.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:558207411797:ios:ad203af4f14a55aa0fd6dc</string>
+	<key>DATABASE_URL</key>
+	<string>https://fruitlense.firebaseio.com</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
+</dict>
+</plist>
