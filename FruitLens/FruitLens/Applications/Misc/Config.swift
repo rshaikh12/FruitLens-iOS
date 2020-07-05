@@ -12,6 +12,8 @@ class Config {
 
     static let preferences = UserDefaults.standard
     static var currentUser: ObjectUser?
+    static var dailyLimitSet: Bool = false
+    static var dailyLimit: Int = 0
     
     static func synced(_ lock: Any, closure: () -> ()) {
         objc_sync_enter(lock)
@@ -40,8 +42,9 @@ class Config {
             print(error.localizedDescription)
         }
         
-
-    
+        preferences.set(dailyLimitSet, forKey: "dailyLimitSet")
+        preferences.set(dailyLimit, forKey: "dailyLimit")
+        
         preferences.synchronize()
     }
     
@@ -51,6 +54,9 @@ class Config {
             if let currentUserObject = preferences.value(forKey: "currentUser") as? NSData {
                 currentUser = try NSKeyedUnarchiver.unarchivedObject(ofClass: ObjectUser.self, from: currentUserObject as Data)
             }
+            dailyLimitSet = preferences.value(forKey: "dailyLimitSet") as? Bool ?? false
+            dailyLimit = preferences.value(forKey: "dailyLimit") as? Int ?? 0
+            
         } catch let error {
             print(error.localizedDescription)
         }
@@ -70,4 +76,20 @@ class Config {
     static func isLoggedIn() -> Bool {
         return (Config.getCurrentUser() != nil)
     }
+    
+    static func hasDailyLimitSet() -> Bool {
+        return dailyLimitSet 
+    }
+    
+    static func getDailyLimit() -> Int {
+        return dailyLimit 
+    }
+    
+    static func setDailyLimit(_ limit: Int) {
+        self.dailyLimit = limit
+    }
+    
+    static func setHasDailyLimit(_ hasLimit: Bool) {
+        self.dailyLimitSet = hasLimit
+        }
 }

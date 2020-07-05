@@ -37,14 +37,16 @@ class ProfileController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
         self.profileName.text = Config.currentUser?.name ?? Config.currentUser?.email
         buildValues()
-        // Config.currentUser?.setImageForUser(self.profilePicture)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -65,6 +67,8 @@ class ProfileController: UIViewController {
             settingsTable.isHidden = false
             break;
         }
+        profileTable.reloadData()
+        settingsTable.reloadData()
     }
     
     func buildValues() {
@@ -105,6 +109,13 @@ class ProfileController: UIViewController {
     }
 }
 
+extension ProfileController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
+        return string.rangeOfCharacter(from: invalidCharacters) == nil
+    }
+}
+
 extension ProfileController: UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -119,7 +130,11 @@ extension ProfileController: UITableViewDelegate {
         if tableView == self.profileTable {
             return 1
         } else {
-            return 1
+            if section == 1 {
+                return 2
+            } else if section == 2 || section == 0 {
+                return 1
+            }
         }
         return 0
     }
@@ -181,11 +196,18 @@ extension ProfileController: UITableViewDelegate {
         var cell: UITableViewCell
         let normal = tableView.dequeueReusableCell(withIdentifier: "normal") as! SettingsCell
         let progress = tableView.dequeueReusableCell(withIdentifier: "progress") as! ProgressCell
+        let progress2 = tableView.dequeueReusableCell(withIdentifier: "progress2") as! ProgressCell
         
         switch indexPath.section {
             case 1, 2, 3, 4, 5:
-                cell = progress
-                (cell as! ProgressCell).setValues(self.processedFoodValues[indexPath.section - 1])
+                
+                let days = indexPath.section == 1 ? 1 : indexPath.section == 2 ? 7 : indexPath.section == 3 ? 30 :
+                indexPath.section == 4 ? 365 : 0
+                
+                cell = days != 0 && Config.hasDailyLimitSet() ? progress2 : progress
+                
+                (cell as! ProgressCell).setValues(self.processedFoodValues[indexPath.section - 1],
+                                                  days: days)
             default:
                 cell = normal
         }
@@ -202,7 +224,24 @@ extension ProfileController: UITableViewDelegate {
             switch indexPath.row {
             case 0:
                 cell = normal
-                normal.setText("Vibration", isSwitch: true)
+                normal.setText("Daily limit", isSwitch: true)
+                normal.switchButton?.isOn = Config.hasDailyLimitSet()
+                normal.switchHandler = {
+                    Config.setHasDailyLimit(normal.switchButton?.isOn ?? false)
+                    tableView.reloadData()
+                }
+            case 1:
+                cell = normal
+                normal.setTextField("Daily limit value")
+                normal.textField?.keyboardType = .numberPad
+                normal.textField?.text = "\(Config.getDailyLimit())"
+                normal.textField?.isEnabled = Config.hasDailyLimitSet()
+                normal.textField?.delegate = self
+                normal.textField?.enablesReturnKeyAutomatically = true
+                
+                normal.textFieldHandler = {
+                    Config.setDailyLimit(Int(normal.textField?.text ?? "0")!)
+                }
             default:
                 cell = normal
                 break
@@ -226,11 +265,11 @@ extension ProfileController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == self.settingsTable {
-            self.selectRowForThirdTable(didSelectRowAt: indexPath)
+            self.selectRowForThirdTable(didSelectRowAt: indexPath, tableView)
         }
     }
     
-    func selectRowForThirdTable(didSelectRowAt indexPath: IndexPath) {
+    func selectRowForThirdTable(didSelectRowAt indexPath: IndexPath, _ tableView: UITableView) {
         
         switch indexPath.section {
         case 2:
@@ -284,4 +323,5 @@ extension ProfileController: UITableViewDataSource {
         view.backgroundColor = UIColor(red: 111/255, green: 113/255, blue: 121/255, alpha: 1)
         return view
     }
+    
 }
