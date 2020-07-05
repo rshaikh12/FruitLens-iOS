@@ -14,7 +14,6 @@ import Vision
 class VisionObjectRecognitionViewController: ViewController {
     
     private var detectionOverlay: CALayer! = nil
-
         
     // Vision parts
     private var requests = [VNRequest]()
@@ -69,7 +68,6 @@ class VisionObjectRecognitionViewController: ViewController {
                 }
             }
             
-            
             let textLayer = self.createTextSubLayerInBounds(objectBounds,
                                                             identifier: topLabelObservation.identifier,
                                                             confidence: topLabelObservation.confidence,
@@ -115,31 +113,34 @@ class VisionObjectRecognitionViewController: ViewController {
                                          y: 0.0,
                                          width: bufferSize.width,
                                          height: bufferSize.height)
-        detectionOverlay.position = CGPoint(x: rootLayer.bounds.midX, y: rootLayer.bounds.midY)
-        rootLayer.addSublayer(detectionOverlay)
+        if let rootLayer = rootLayer {
+            detectionOverlay.position = CGPoint(x: rootLayer.bounds.midX, y: rootLayer.bounds.midY)
+            rootLayer.addSublayer(detectionOverlay)
+        }
     }
     
     func updateLayerGeometry() {
-        let bounds = rootLayer.bounds
-        var scale: CGFloat
-        
-        let xScale: CGFloat = bounds.size.width / bufferSize.height
-        let yScale: CGFloat = bounds.size.height / bufferSize.width
-        
-        scale = fmax(xScale, yScale)
-        if scale.isInfinite {
-            scale = 1.0
+        if let rootLayer = rootLayer {
+            let bounds = rootLayer.bounds
+            var scale: CGFloat
+            
+            let xScale: CGFloat = bounds.size.width / bufferSize.height
+            let yScale: CGFloat = bounds.size.height / bufferSize.width
+            
+            scale = fmax(xScale, yScale)
+            if scale.isInfinite {
+                scale = 1.0
+            }
+            CATransaction.begin()
+            CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
+            
+            // rotate the layer into screen orientation and scale and mirror
+            detectionOverlay.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(.pi / 2.0)).scaledBy(x: scale, y: -scale))
+            // center the layer
+            detectionOverlay.position = CGPoint(x: bounds.midX, y: bounds.midY)
+            
+            CATransaction.commit()
         }
-        CATransaction.begin()
-        CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
-        
-        // rotate the layer into screen orientation and scale and mirror
-        detectionOverlay.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(.pi / 2.0)).scaledBy(x: scale, y: -scale))
-        // center the layer
-        detectionOverlay.position = CGPoint(x: bounds.midX, y: bounds.midY)
-        
-        CATransaction.commit()
-        
     }
     
     func createTextSubLayerInBounds(_ bounds: CGRect, identifier: String, confidence: VNConfidence, fructose: Float64) -> CATextLayer {

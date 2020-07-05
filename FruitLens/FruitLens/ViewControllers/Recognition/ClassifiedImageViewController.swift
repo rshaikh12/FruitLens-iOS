@@ -25,7 +25,7 @@ class ClassifiedImageViewController: VisionObjectRecognitionViewController {
     }
     
     @IBAction func retunToCameraScreen(_ sender: UIButton) {
-        //todo
+        self.dismiss(animated: true)
     }
     
     @IBAction func updateLabel(_ sender: Any) {

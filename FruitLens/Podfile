@@ -5,8 +5,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'FruitLens' do
   use_frameworks!
   
-  pod 'Firebase'
   pod 'Firebase/Auth'
+  pod 'Firebase/Auth'
+  pod 'FirebaseAuthInterop'
+  pod 'FirebaseCoreDiagnosticsInterop'
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'

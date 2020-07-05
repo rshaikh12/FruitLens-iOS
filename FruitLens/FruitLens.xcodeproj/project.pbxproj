@@ -38,11 +38,9 @@
 		844FC1832472C23700D32668 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1822472C23700D32668 /* Preview Assets.xcassets */; };
 		844FC1AA2472C43E00D32668 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1A92472C43E00D32668 /* ViewController.swift */; };
 		844FC1AC2472C4F800D32668 /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1AB2472C4F800D32668 /* VisionObjectRecognitionViewController.swift */; };
-		844FC1B02472C5DE00D32668 /* FruitLens.png in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1AF2472C5DE00D32668 /* FruitLens.png */; };
 		84517FA924A9ED240043B2BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84517FA824A9ED240043B2BA /* Main.storyboard */; };
 		84517FAC24AA017D0043B2BA /* ClassifiedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84517FAB24AA017D0043B2BA /* ClassifiedImageViewController.swift */; };
 		845576C824A0CFDB00EDCEEA /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 845576C724A0CFDA00EDCEEA /* Models */; };
-		845576CA24A0E6CC00EDCEEA /* FruitLensLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 845576C924A0E6CB00EDCEEA /* FruitLensLogo.png */; };
 		84CE04A22495044500FE12BB /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04A12495044500FE12BB /* MasterJournalViewController.swift */; };
 		84CE04E5249505D600FE12BB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E4249505D600FE12BB /* DetailViewController.swift */; };
 		84CE04E82495253C00FE12BB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE04E72495253C00FE12BB /* CoreDataHelper.swift */; };
@@ -320,11 +318,9 @@
 		844FC1972472C23700D32668 /* FruitLensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitLensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FC1A92472C43E00D32668 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		844FC1AB2472C4F800D32668 /* VisionObjectRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionViewController.swift; sourceTree = "<group>"; };
-		844FC1AF2472C5DE00D32668 /* FruitLens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FruitLens.png; path = ../../../../../Desktop/FruitLens.png; sourceTree = "<group>"; };
 		84517FA824A9ED240043B2BA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84517FAB24AA017D0043B2BA /* ClassifiedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedImageViewController.swift; sourceTree = "<group>"; };
 		845576C724A0CFDA00EDCEEA /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		845576C924A0E6CB00EDCEEA /* FruitLensLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FruitLensLogo.png; path = Assets.xcassets/FruitLens.imageset/FruitLensLogo.png; sourceTree = "<group>"; };
 		84CE04A12495044500FE12BB /* MasterJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterJournalViewController.swift; sourceTree = "<group>"; };
 		84CE04E4249505D600FE12BB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		84CE04E72495253C00FE12BB /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
@@ -526,8 +522,6 @@
 				845576C724A0CFDA00EDCEEA /* Models */,
 				4E2510D2248D6356009EFE52 /* GoogleService-Info.plist */,
 				844FC17F2472C23700D32668 /* Assets.xcassets */,
-				844FC1AF2472C5DE00D32668 /* FruitLens.png */,
-				845576C924A0E6CB00EDCEEA /* FruitLensLogo.png */,
 				4E0D8AE3248D275700023637 /* ViewControllers */,
 				84D3261D247B138E00105B94 /* Applications */,
 				84D3261B247B135400105B94 /* DataManagement */,
@@ -990,7 +984,6 @@
 				84D326C8247B1A8700105B94 /* FirebaseAuth in Resources */,
 				84D326CA247B1A8700105B94 /* GoogleDataTransport in Resources */,
 				84D326C2247B1A8700105B94 /* GoogleAppMeasurement in Resources */,
-				844FC1B02472C5DE00D32668 /* FruitLens.png in Resources */,
 				84D326C5247B1A8700105B94 /* FirebaseAnalytics in Resources */,
 				84D326B8247B1A8700105B94 /* Target Support Files in Resources */,
 				84517FA924A9ED240043B2BA /* Main.storyboard in Resources */,
@@ -1004,7 +997,6 @@
 				84D326B0247B1A8700105B94 /* gRPC-C++ in Resources */,
 				84D326B1247B1A8700105B94 /* FirebaseCoreDiagnosticsInterop in Resources */,
 				84D326BC247B1A8700105B94 /* FirebaseCoreDiagnostics in Resources */,
-				845576CA24A0E6CC00EDCEEA /* FruitLensLogo.png in Resources */,
 				84D326C1247B1A8700105B94 /* Local Podspecs in Resources */,
 				84D326B5247B1A8700105B94 /* GoogleDataTransportCCTSupport in Resources */,
 				84D326BA247B1A8700105B94 /* Firebase in Resources */,
@@ -1300,7 +1292,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FruitLens/Preview Content\"";
-				DEVELOPMENT_TEAM = XG9N63BT3R;
+				DEVELOPMENT_TEAM = P8P6AFZH78;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FruitLens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1321,7 +1313,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FruitLens/Preview Content\"";
-				DEVELOPMENT_TEAM = XG9N63BT3R;
+				DEVELOPMENT_TEAM = P8P6AFZH78;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FruitLens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

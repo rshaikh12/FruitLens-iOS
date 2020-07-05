@@ -20,8 +20,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         //guard let vc: ViewController = UIStoryboard.initial(storyboard: storyboard)
     }
     
-    
-    
     @IBOutlet weak private var previewView: UIView!
     private let session = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer! = nil
@@ -36,7 +34,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAVCapture()
-        eatButton.layer.zPosition=10
+        if let eatButton = eatButton {
+            //eatButton.layer.zPosition = 10
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,7 +81,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         // Always process the frames
         captureConnection?.isEnabled = true
         do {
-            try  videoDevice!.lockForConfiguration()
+            try videoDevice!.lockForConfiguration()
             let dimensions = CMVideoFormatDescriptionGetDimensions((videoDevice?.activeFormat.formatDescription)!)
             bufferSize.width = CGFloat(dimensions.width)
             bufferSize.height = CGFloat(dimensions.height)
@@ -92,9 +92,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         session.commitConfiguration()
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        rootLayer = previewView.layer
-        previewLayer.frame = rootLayer.bounds
-        rootLayer.addSublayer(previewLayer)
+        if let previewView = previewView {
+            rootLayer = previewView.layer
+            previewLayer.frame = rootLayer.bounds
+            rootLayer.addSublayer(previewLayer)
+        }
+
     }
     
     func startCaptureSession() {
@@ -108,7 +111,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput, didDrop didDropSampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        // print("frame dropped")
+        print("frame dropped")
     }
     
     public func exifOrientationFromDeviceOrientation() -> CGImagePropertyOrientation {
