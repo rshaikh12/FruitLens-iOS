@@ -187,7 +187,15 @@ class VisionObjectRecognitionViewController: ViewController {
     }
     
     @IBAction override func eatFruit(_ sender: UIButton){
-        DatabaseInserter.addFood(name: self.detectedFood!.0, fructoseValue: self.detectedFood!.1)
+        let alert = UIAlertController(title: "Fruit Detected", message: "The following fruit has been detected: " + self.detectedFood!.0, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: addToDB))
+        alert.addAction(UIAlertAction(title: "Discard", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+
     }
     
+    func addToDB(alert: UIAlertAction!){
+        DatabaseInserter.addFood(name: self.detectedFood!.0, fructoseValue: self.detectedFood!.1)
+    }
 }
