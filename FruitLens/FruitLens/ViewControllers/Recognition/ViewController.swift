@@ -16,9 +16,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var rootLayer: CALayer! = nil
     
     @IBOutlet weak var eatButton: UIButton!
-    @IBAction func eatFruit(_ sender: UIButton){
-        //guard let vc: ViewController = UIStoryboard.initial(storyboard: storyboard)
-    }
+    
+
     
     @IBOutlet weak private var previewView: UIView!
     private let session = AVCaptureSession()
@@ -135,6 +134,9 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             exifOrientation = .up
         }
         return exifOrientation
+    }
+    
+    @IBAction func eatFruit(_ sender: UIButton){
     }
     
 }

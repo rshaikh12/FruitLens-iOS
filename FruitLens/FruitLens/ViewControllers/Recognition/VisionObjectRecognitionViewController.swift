@@ -186,12 +186,8 @@ class VisionObjectRecognitionViewController: ViewController {
         return shapeLayer
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showPreview" {
-            if let destination = segue.destination as? ClassifiedImageViewController {
-                destination.food = self.detectedFood
-            }
-        }
+    @IBAction override func eatFruit(_ sender: UIButton){
+        DatabaseInserter.addFood(name: self.detectedFood!.0, fructoseValue: self.detectedFood!.1)
     }
     
 }
