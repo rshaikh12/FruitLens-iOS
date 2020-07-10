@@ -20,8 +20,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwS-t9-DYo">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwS-t9-DYo">
+                                <rect key="frame" x="0.0" y="62" width="414" height="788"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1id-3s-HNL">
                                         <rect key="frame" x="108" y="404" width="94" height="85"/>
@@ -33,6 +33,20 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOR-WH-pAd">
+                                <rect key="frame" x="0.0" y="-43" width="414" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQS-qs-fKP">
+                                        <rect key="frame" x="24" y="59" width="251" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -48,12 +62,15 @@
                     <navigationItem key="navigationItem" id="GPe-cK-BvG"/>
                     <connections>
                         <outlet property="eatButton" destination="1id-3s-HNL" id="pAH-ac-8xS"/>
+                        <outlet property="label" destination="JQS-qs-fKP" id="xhy-H2-oVf"/>
+                        <outlet property="labelView" destination="DOR-WH-pAd" id="E9S-Cf-qyq"/>
                         <outlet property="previewView" destination="NwS-t9-DYo" id="XTQ-Br-CuO"/>
+                        <segue destination="pcO-H8-VeY" kind="presentation" identifier="noteSegue" id="CPU-jG-A7b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rge-Y6-F3a" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556.52173913043487" y="-379.01785714285711"/>
+            <point key="canvasLocation" x="626" y="-379"/>
         </scene>
         <!--Launch View Controller-->
         <scene sceneID="mIb-vA-4NV">
@@ -1738,7 +1755,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="h4l-2g-4kG"/>
         <segue reference="hpi-9z-xJ8"/>
-        <segue reference="QC0-kt-8Op"/>
+        <segue reference="CPU-jG-A7b"/>
         <segue reference="MSX-Q9-bUd"/>
         <segue reference="JIC-ek-7au"/>
         <segue reference="T9d-Dk-Ab3"/>

@@ -16,7 +16,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var rootLayer: CALayer! = nil
     
     @IBOutlet weak var eatButton: UIButton!
-    
+    @IBOutlet var label: UILabel!
+    @IBOutlet weak private var labelView:UIView!
 
     
     @IBOutlet weak private var previewView: UIView!

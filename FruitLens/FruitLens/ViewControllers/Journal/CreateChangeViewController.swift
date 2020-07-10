@@ -83,12 +83,12 @@ class CreateChangeViewController: UIViewController, UITextViewDelegate  {
                 message: "Cannot change the note, unexpected error occurred. Try again later.",
                 preferredStyle: .alert)
             
-            // add OK action
+
             alert.addAction(UIAlertAction(title: "OK",
                                           style: .default ) { (_) in self.performSegue(
                                               withIdentifier: "backToMasterView",
                                               sender: self)})
-            // show alert
+        
             self.present(alert, animated: true)
         }
     }
@@ -98,15 +98,15 @@ class CreateChangeViewController: UIViewController, UITextViewDelegate  {
         self.hideKeyboardWhenTappedAround()
 
         
-        // set text view delegate so that we can react on text change
+        // set text view delegate to react to text changes
         noteTextTextView.delegate = self
         
-        // check if we are in create mode or in change mode
-        if let changingReallySimpleNote = self.changeJournalEntry {
+        // check if in create mode or in change mode
+        if let changeNote = self.changeJournalEntry {
             // in change mode: initialize for fields with data coming from note to be changed
             noteDateLabel.text = DateHelper.convertDate(date: Date.init(seconds: noteCreationTimeStamp))
-            noteTextTextView.text = changingReallySimpleNote.noteText
-            noteTitleTextField.text = changingReallySimpleNote.noteTitle
+            noteTextTextView.text = changeNote.noteText
+            noteTitleTextField.text = changeNote.noteTitle
             // enable done button by default
             noteDoneButton.isEnabled = true
         } else {
@@ -119,13 +119,11 @@ class CreateChangeViewController: UIViewController, UITextViewDelegate  {
         noteTextTextView.layer.borderWidth = 1.0
         noteTextTextView.layer.cornerRadius = 5
 
-        // For back button in navigation bar, change text
         let backButton = UIBarButtonItem()
         backButton.title = "Back"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
 
-    //Handle the text changes here
     func textViewDidChange(_ textView: UITextView) {
         if self.changeJournalEntry != nil {
             // change mode

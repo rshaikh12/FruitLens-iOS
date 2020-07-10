@@ -17,12 +17,15 @@ class VisionObjectRecognitionViewController: ViewController {
     private var detectedFood: (String, Float64, UIImage?)?
     private var requests = [VNRequest]()
     
+    var fruit = ""
+    var fructose = 0.0
+    
     @discardableResult
     func setupVision() -> NSError? {
         // Setup Vision parts
         let error: NSError! = nil
         
-        guard let modelURL = Bundle.main.url(forResource: "ObjectDetector", withExtension: "mlmodelc") else {
+        guard let modelURL = Bundle.main.url(forResource: "Resnet50", withExtension: "mlmodelc") else {
             print("Model file is missing")
             return NSError(domain: "VisionObjectRecognitionViewController", code: -1, userInfo: [NSLocalizedDescriptionKey: "Model file is missing"])
         }
@@ -32,7 +35,8 @@ class VisionObjectRecognitionViewController: ViewController {
                 DispatchQueue.main.async(execute: {
                     // perform all the UI updates on the main queue
                     if let results = request.results {
-                        self.drawVisionRequestResults(results)
+                        //self.drawVisionRequestResults(results)
+                        self.displayLabel(results)
                     }
                 })
             })
@@ -42,6 +46,39 @@ class VisionObjectRecognitionViewController: ViewController {
         }
         
         return error
+        
+    }
+    
+    func displayLabel(_ results: [Any]) {
+        guard let result = results as? [VNClassificationObservation]
+            else {return}
+        guard let firstObservation = result.first
+            else {return}
+            
+        let dictionary: [String?: Float64] = ["Banana": 123.0, "lemon":12.0]
+            
+        var fructose: Float64? = 0.0
+        var existing = false
+        
+        for fruit in dictionary.keys {
+            if fruit == firstObservation.identifier{
+                fructose = dictionary[firstObservation.identifier]
+                existing = true
+                self.detectedFood = (firstObservation.identifier, fructose!, nil)
+            }
+        }
+            
+            if let eatButton = eatButton {
+                eatButton.isHidden = !existing
+            }
+            
+        self.label.text = firstObservation.identifier
+            
+            
+            
+        
+        
+        
     }
     
     func drawVisionRequestResults(_ results: [Any]) {
@@ -187,15 +224,27 @@ class VisionObjectRecognitionViewController: ViewController {
     }
     
     @IBAction override func eatFruit(_ sender: UIButton){
-        let alert = UIAlertController(title: "Fruit Detected", message: "The following fruit has been detected: " + self.detectedFood!.0, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: addToDB))
-        alert.addAction(UIAlertAction(title: "Discard", style: .cancel, handler: nil))
-        
+        let alert = UIAlertController(title: "Fruit Detected", message: "Die folgende Frucht wurde erkannt: " + self.detectedFood!.0, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Hinzufügen", style: .default, handler: addToDB))
+        alert.addAction(UIAlertAction(title: "Verwerfen", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Tagebucheintrag erstellen", style: .default, handler: nil))
         self.present(alert, animated: true)
 
     }
     
+    func createJournalEntry(alert: UIAlertAction!){
+        fruit = self.detectedFood!.0
+        fructose = self.detectedFood!.1
+        performSegue(withIdentifier: "noteSegue", sender: self)
+        DatabaseInserter.addFood(name: self.detectedFood!.0, fructoseValue: self.detectedFood!.1)
+    }
+    
     func addToDB(alert: UIAlertAction!){
         DatabaseInserter.addFood(name: self.detectedFood!.0, fructoseValue: self.detectedFood!.1)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! CreateChangeViewController
+        vc.noteTitleTextField.text = self.detectedFood!.0
     }
 }
