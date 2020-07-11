@@ -48,11 +48,10 @@ class RegisterController: UIViewController {
             user.password = password
             
             manager.register(user: user) {[weak self] response in
-              ThemeService.showLoading(false)
               switch response {
-                case .failure: self?.showAlert()
-                case .success:
-                    self?.dismiss(animated: true, completion: nil)
+                case .success: self?.showAlert()    //TODO: this should be failure, no idea why it
+                case .failure:
+                    self?.dismiss(animated: true, completion: nil) //TODO: this should be success
               }
             }
         }

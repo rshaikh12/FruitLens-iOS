@@ -3,7 +3,7 @@
 //  FruitLens
 //
 //  Created by Emre Can Bolat on 07.06.20.
-//  Copyright © 2020 ChristophWeber. All rights reserved.
+//  Copyright © 2020 Emre Can Bolat. All rights reserved.
 //
 
 import GRDB

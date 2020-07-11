@@ -56,6 +56,11 @@ class VisionObjectRecognitionViewController: ViewController {
             else {return}
             
         let dictionary: [String?: Float64] = ["Banana": 123.0, "lemon":12.0]
+        
+        
+        let data = DataLoader().fruitsData
+        //print(data)
+        
             
         var fructose: Float64? = 0.0
         var existing = false

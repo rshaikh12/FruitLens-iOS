@@ -1,6 +1,16 @@
-{
-"Banana": 1.25
-"Egg": 0.25
-"Cofee": 2.00
-"Waffle": 3.00
-}
+[
+    {
+        "fruits_name" : "Lemon",
+        "fruit_fructose" : 123,
+        "fruit_weight_min" : 77,
+        "fruit_weight_max" : 99,
+        "fruit_weight_mean" : 88
+    },
+    {
+        "fruits_name" : "Banana",
+        "fruit_fructose" : 123,
+        "fruit_weight_min" : 77,
+        "fruit_weight_max" : 99,
+        "fruit_weight_mean" : 88
+    }
+]

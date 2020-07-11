@@ -58,13 +58,8 @@ class UserManager {
       }
     }
   }
-  //contacts managing
-  func contacts(_ completion: @escaping CompletionObject<[ObjectUser]>) {
-    FirestoreService().objects(ObjectUser.self, reference: .init(location: .users)) { results in
-      completion(results)
-    }
-  }
-  //userDate in firebase
+
+  //userData in firebase
   func userData(for id: String, _ completion: @escaping CompletionObject<ObjectUser?>) {
     let query = FirestoreService.DataQuery(key: "id", value: id, mode: .equal)
     FirestoreService().objects(ObjectUser.self, reference: .init(location: .users), parameter: query) { users in

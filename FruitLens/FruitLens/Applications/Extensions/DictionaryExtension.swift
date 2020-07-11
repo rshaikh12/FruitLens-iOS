@@ -3,13 +3,13 @@
 //  FruitLense
 //
 //  Created by Christoph Weber on 24.05.20.
-//  Copyright © 2020 Christoph. All rights reserved.
+//  Copyright Apple Developer
 //
 
 
 import Foundation
 
-//converting between JSON and the equivalent Foundation objects (Apple Developer)
+//converting between JSON and the equivalent Foundation objects for Firebase communication
 
 extension Dictionary {
   

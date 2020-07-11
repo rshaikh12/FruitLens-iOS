@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3v-0u-AHT">
-                                <rect key="frame" x="63" y="676" width="288" height="35"/>
+                                <rect key="frame" x="63" y="693.5" width="288" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="vTR-H1-0hx"/>
                                 </constraints>
@@ -108,8 +108,8 @@
                                 <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words helps you connect easily with friends from around the world" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b75-gK-Vg0">
-                                <rect key="frame" x="45" y="721" width="324" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in or register to create a new account" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b75-gK-Vg0">
+                                <rect key="frame" x="45" y="738.5" width="324" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                 <color key="textColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -169,7 +169,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkP-gR-zal">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="656"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673.5"/>
                                 <color key="backgroundColor" red="0.55820894239999996" green="0.093872390690000002" blue="0.1007194892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -1756,8 +1756,8 @@
         <segue reference="h4l-2g-4kG"/>
         <segue reference="hpi-9z-xJ8"/>
         <segue reference="CPU-jG-A7b"/>
-        <segue reference="MSX-Q9-bUd"/>
-        <segue reference="JIC-ek-7au"/>
+        <segue reference="iag-Zi-pTO"/>
+        <segue reference="CDv-FE-4B9"/>
         <segue reference="T9d-Dk-Ab3"/>
         <segue reference="bvc-tn-QNN"/>
     </inferredMetricsTieBreakers>

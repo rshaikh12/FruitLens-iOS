@@ -39,6 +39,8 @@
 		8416A37924A0A804006BB7F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416A35D24A0A804006BB7F9 /* LaunchScreen.storyboard */; };
 		8434E51C24B27ED900783AB8 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434E51B24B27ED900783AB8 /* SplitViewController.swift */; };
 		8446EBF72493CBB300A65C67 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446EBF62493CBB300A65C67 /* JournalEntry.swift */; };
+		844F037324BA21710051F7FE /* FruitsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F037224BA21710051F7FE /* FruitsData.swift */; };
+		844F037524BA22730051F7FE /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F037424BA22730051F7FE /* DataLoader.swift */; };
 		844FC1772472C23600D32668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FC1762472C23600D32668 /* AppDelegate.swift */; };
 		844FC1802472C23700D32668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FC17F2472C23700D32668 /* Assets.xcassets */; };
 		844FC1832472C23700D32668 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FC1822472C23700D32668 /* Preview Assets.xcassets */; };
@@ -70,7 +72,6 @@
 		84D3262B247B14CC00105B94 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32622247B14CC00105B94 /* UIViewControllerExtension.swift */; };
 		84D3262C247B14CC00105B94 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32623247B14CC00105B94 /* KeyboardHandler.swift */; };
 		84D3262D247B14CC00105B94 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32624247B14CC00105B94 /* UIImageExtension.swift */; };
-		84D3262E247B14CC00105B94 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32625247B14CC00105B94 /* UIStoryboardExtension.swift */; };
 		84D3262F247B14CC00105B94 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32626247B14CC00105B94 /* EncodableExtension.swift */; };
 		84D32630247B14CC00105B94 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32627247B14CC00105B94 /* OptionalExtension.swift */; };
 		84D32631247B14CC00105B94 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32628247B14CC00105B94 /* NSObjectExtension.swift */; };
@@ -78,11 +79,9 @@
 		84D32634247B150F00105B94 /* ObjectUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32633247B150F00105B94 /* ObjectUser.swift */; };
 		84D32638247B165600105B94 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32637247B165500105B94 /* Typealias.swift */; };
 		84D3263A247B167100105B94 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32639247B167100105B94 /* UserManager.swift */; };
-		84D32647247B177200105B94 /* ImagePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32641247B177200105B94 /* ImagePickerService.swift */; };
 		84D32648247B177200105B94 /* FireStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32642247B177200105B94 /* FireStorageService.swift */; };
 		84D32649247B177200105B94 /* FirebaseEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32643247B177200105B94 /* FirebaseEnums.swift */; };
 		84D3264A247B177200105B94 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32644247B177200105B94 /* FirestoreService.swift */; };
-		84D3264B247B177200105B94 /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32645247B177200105B94 /* ThemeService.swift */; };
 		84D3264C247B177200105B94 /* FireCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D32646247B177200105B94 /* FireCodable.swift */; };
 		84D326B0247B1A8700105B94 /* gRPC-C++ in Resources */ = {isa = PBXBuildFile; fileRef = 84D3264D247B1A8000105B94 /* gRPC-C++ */; };
 		84D326B1247B1A8700105B94 /* FirebaseCoreDiagnosticsInterop in Resources */ = {isa = PBXBuildFile; fileRef = 84D3264E247B1A8000105B94 /* FirebaseCoreDiagnosticsInterop */; };
@@ -321,6 +320,8 @@
 		8416A35D24A0A804006BB7F9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8434E51B24B27ED900783AB8 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		8446EBF62493CBB300A65C67 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		844F037224BA21710051F7FE /* FruitsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsData.swift; sourceTree = "<group>"; };
+		844F037424BA22730051F7FE /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		844FC1732472C23600D32668 /* FruitLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FC1762472C23600D32668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844FC17F2472C23700D32668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -343,7 +344,6 @@
 		84D32622247B14CC00105B94 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		84D32623247B14CC00105B94 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		84D32624247B14CC00105B94 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		84D32625247B14CC00105B94 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		84D32626247B14CC00105B94 /* EncodableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		84D32627247B14CC00105B94 /* OptionalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 		84D32628247B14CC00105B94 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
@@ -351,11 +351,9 @@
 		84D32633247B150F00105B94 /* ObjectUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectUser.swift; sourceTree = "<group>"; };
 		84D32637247B165500105B94 /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		84D32639247B167100105B94 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		84D32641247B177200105B94 /* ImagePickerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerService.swift; sourceTree = "<group>"; };
 		84D32642247B177200105B94 /* FireStorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireStorageService.swift; sourceTree = "<group>"; };
 		84D32643247B177200105B94 /* FirebaseEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseEnums.swift; sourceTree = "<group>"; };
 		84D32644247B177200105B94 /* FirestoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
-		84D32645247B177200105B94 /* ThemeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 		84D32646247B177200105B94 /* FireCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireCodable.swift; sourceTree = "<group>"; };
 		84D3264D247B1A8000105B94 /* gRPC-C++ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "gRPC-C++"; sourceTree = "<group>"; };
 		84D3264E247B1A8000105B94 /* FirebaseCoreDiagnosticsInterop */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FirebaseCoreDiagnosticsInterop; sourceTree = "<group>"; };
@@ -469,7 +467,6 @@
 		4E2510B4248D2C71009EFE52 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				4E2510C6248D3D7F009EFE52 /* Cells */,
 				4E2510B5248D2CA3009EFE52 /* Helper */,
 				4E2510C4248D3BD5009EFE52 /* CustomTableView.swift */,
 				4E2510CD248D4A68009EFE52 /* CustomProgressView.swift */,
@@ -601,6 +598,7 @@
 			children = (
 				84D32633247B150F00105B94 /* ObjectUser.swift */,
 				4E2510D9248D8669009EFE52 /* Food.swift */,
+				4E2510C6248D3D7F009EFE52 /* Cells */,
 				8446EBF62493CBB300A65C67 /* JournalEntry.swift */,
 			);
 			path = ObjectModels;
@@ -613,8 +611,6 @@
 				84D32646247B177200105B94 /* FireCodable.swift */,
 				84D32642247B177200105B94 /* FireStorageService.swift */,
 				84D32644247B177200105B94 /* FirestoreService.swift */,
-				84D32641247B177200105B94 /* ImagePickerService.swift */,
-				84D32645247B177200105B94 /* ThemeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -625,6 +621,8 @@
 				84D32639247B167100105B94 /* UserManager.swift */,
 				4E2510D6248D7DEE009EFE52 /* Database.swift */,
 				4E15AC8D24B22F4E00E962FE /* DatabaseInserter.swift */,
+				844F037224BA21710051F7FE /* FruitsData.swift */,
+				844F037424BA22730051F7FE /* DataLoader.swift */,
 			);
 			path = DataManagement;
 			sourceTree = "<group>";
@@ -650,7 +648,6 @@
 				84D32627247B14CC00105B94 /* OptionalExtension.swift */,
 				84D32629247B14CC00105B94 /* StringExtension.swift */,
 				84D32624247B14CC00105B94 /* UIImageExtension.swift */,
-				84D32625247B14CC00105B94 /* UIStoryboardExtension.swift */,
 				84D32622247B14CC00105B94 /* UIViewControllerExtension.swift */,
 				4E0D8B02248D27FB00023637 /* UIWindowExtension.swift */,
 				4E2510BE248D2D4A009EFE52 /* UIViewExtension.swift */,
@@ -1112,7 +1109,6 @@
 				84D3262F247B14CC00105B94 /* EncodableExtension.swift in Sources */,
 				4E2510B7248D2CC1009EFE52 /* Interactor.swift in Sources */,
 				4E2510C8248D3D91009EFE52 /* ProfileCell.swift in Sources */,
-				84D3264B247B177200105B94 /* ThemeService.swift in Sources */,
 				84D32638247B165600105B94 /* Typealias.swift in Sources */,
 				4E2510C1248D2E8A009EFE52 /* LoginController.swift in Sources */,
 				4E2510D1248D5F61009EFE52 /* RegisterController.swift in Sources */,
@@ -1122,10 +1118,10 @@
 				4E2510CA248D3E4F009EFE52 /* SettingsCell.swift in Sources */,
 				84D3262B247B14CC00105B94 /* UIViewControllerExtension.swift in Sources */,
 				84D3263A247B167100105B94 /* UserManager.swift in Sources */,
+				844F037324BA21710051F7FE /* FruitsData.swift in Sources */,
 				4E0D8B01248D27C800023637 /* LaunchRouter.swift in Sources */,
 				84CE04EA2495255900FE12BB /* DateHelper.swift in Sources */,
 				84D32648247B177200105B94 /* FireStorageService.swift in Sources */,
-				84D3262E247B14CC00105B94 /* UIStoryboardExtension.swift in Sources */,
 				4E2510D7248D7DEE009EFE52 /* Database.swift in Sources */,
 				84CE04F224952E2F00FE12BB /* CreateChangeViewController.swift in Sources */,
 				4E15ACA524B24B8300E962FE /* MobileNet.mlmodel in Sources */,
@@ -1147,10 +1143,10 @@
 				4E2510BB248D2CE2009EFE52 /* DismissMenuAnimator.swift in Sources */,
 				84517FAC24AA017D0043B2BA /* ClassifiedImageViewController.swift in Sources */,
 				84D32632247B14CC00105B94 /* StringExtension.swift in Sources */,
-				84D32647247B177200105B94 /* ImagePickerService.swift in Sources */,
 				4E0D8B03248D27FB00023637 /* UIWindowExtension.swift in Sources */,
 				84CE04F6249530C300FE12BB /* NoteUITableViewCell.swift in Sources */,
 				4E2510B3248D2C27009EFE52 /* TabBarController.swift in Sources */,
+				844F037524BA22730051F7FE /* DataLoader.swift in Sources */,
 				84D32649247B177200105B94 /* FirebaseEnums.swift in Sources */,
 				4E2510CE248D4A68009EFE52 /* CustomProgressView.swift in Sources */,
 				84D3262D247B14CC00105B94 /* UIImageExtension.swift in Sources */,
