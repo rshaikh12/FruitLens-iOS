@@ -3,7 +3,6 @@
 //  FruitLens
 //
 //  Created by Christoph Weber on 18.05.20.
-//  Copyright © 2020 ChristophWeber. All rights reserved.
 //
 
 
@@ -16,6 +15,9 @@ class VisionObjectRecognitionViewController: ViewController {
     private var detectionOverlay: CALayer! = nil
     private var detectedFood: (String, Float64, UIImage?)?
     private var requests = [VNRequest]()
+    
+    let fruitsData = DataLoader().fruitsData
+
     
     var fruit = ""
     var fructose = 0.0
@@ -54,34 +56,27 @@ class VisionObjectRecognitionViewController: ViewController {
             else {return}
         guard let firstObservation = result.first
             else {return}
-            
-        let dictionary: [String?: Float64] = ["Banana": 123.0, "lemon":12.0]
+                    
         
-        
-        let data = DataLoader().fruitsData
-        //print(data)
-        
-            
         var fructose: Float64? = 0.0
         var existing = false
         
-        for fruit in dictionary.keys {
-            if fruit == firstObservation.identifier{
-                fructose = dictionary[firstObservation.identifier]
+        for f in fruitsData {
+            if f.fruits_name == firstObservation.identifier{
+                fructose = f.fruit_fructose * f.fruit_weight_mean
                 existing = true
-                self.detectedFood = (firstObservation.identifier, fructose!, nil)
+                self.detectedFood = (f.fruits_name, fructose!, nil)
             }
         }
+        
+        
             
-            if let eatButton = eatButton {
-                eatButton.isHidden = !existing
-            }
+        if let eatButton = eatButton {
+            eatButton.isHidden = !existing
+        }
             
         self.label.text = firstObservation.identifier
             
-            
-            
-        
         
         
     }
@@ -101,29 +96,27 @@ class VisionObjectRecognitionViewController: ViewController {
             
             // Select only the label with the highest confidence.
             let topLabelObservation = objectObservation.labels[0]
-            let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
-            let shapeLayer = self.createRoundedRectLayerWithBounds(objectBounds)
-
-
-            //dummy dict as database substitute - to be changed
-            let dictionary: [String?: Float64] = ["Banana": 123.0, "Egg":12.0]
+//            let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
             
             var fructose: Float64? = 0.0
             var existing = false
-            for fruit in dictionary.keys {
-                if fruit == topLabelObservation.identifier{
-                    fructose = dictionary[topLabelObservation.identifier]
+            
+            for f in fruitsData {
+                if f.fruits_name == topLabelObservation.identifier{
+                    fructose = f.fruit_fructose * f.fruit_weight_mean
                     existing = true
                     self.detectedFood = (topLabelObservation.identifier, fructose!, nil)
                 }
             }
             
-            let textLayer = self.createTextSubLayerInBounds(objectBounds,
-                                                            identifier: topLabelObservation.identifier,
-                                                            confidence: topLabelObservation.confidence,
-                                                            fructose: fructose ?? 0.0)
-            shapeLayer.addSublayer(textLayer)
-            detectionOverlay.addSublayer(shapeLayer)
+            
+            //let textLayer = self.createTextSubLayerInBounds(objectBounds,
+            //                                                identifier: topLabelObservation.identifier,
+            //                                                confidence: topLabelObservation.confidence,
+            //                                                fructose: fructose ?? 0.0)
+            //shapeLayer.addSublayer(textLayer)
+            
+            //detectionOverlay.addSublayer(shapeLayer)
             if let eatButton = eatButton {
                 eatButton.isHidden = !existing
             }

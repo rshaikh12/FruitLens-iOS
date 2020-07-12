@@ -1,16 +1,62 @@
 [
     {
-        "fruits_name" : "Lemon",
-        "fruit_fructose" : 123,
-        "fruit_weight_min" : 77,
-        "fruit_weight_max" : 99,
-        "fruit_weight_mean" : 88
+        "fruits_name" : "date",
+        "fruit_fructose" : 0.25,
+        "fruit_weight_mean" : 10
     },
     {
-        "fruits_name" : "Banana",
-        "fruit_fructose" : 123,
-        "fruit_weight_min" : 77,
-        "fruit_weight_max" : 99,
-        "fruit_weight_mean" : 88
-    }
+        "fruits_name" : "fig",
+        "fruit_fructose" : 0.24,
+        "fruit_weight_mean" : 50
+    },
+    {
+        "fruits_name" : "plum",
+        "fruit_fructose" : 0.09,
+        "fruit_weight_mean" : 35
+    },
+    {
+        "fruits_name" : "apple",
+        "fruit_fructose" : 0.06,
+        "fruit_weight_mean" : 150
+    },
+    {
+        "fruits_name" : "peach",
+        "fruit_fructose" : 0.01,
+        "fruit_weight_mean" : 100
+    },
+    {
+        "fruits_name" : "grapes",
+        "fruit_fructose" : 0.07,
+        "fruit_weight_mean" : 100
+    },
+    {
+        "fruits_name" : "blackberry",
+        "fruit_fructose" : 0.03,
+        "fruit_weight_mean" : 100
+    },
+    {
+        "fruits_name" : "raspberry",
+        "fruit_fructose" : 0.02,
+        "fruit_weight_mean" : 100
+    },
+    {
+        "fruits_name" : "orange",
+        "fruit_fructose" : 0.03,
+        "fruit_weight_mean" : 150
+    },
+    {
+        "fruits_name" : "kiwi",
+        "fruit_fructose" : 0.046,
+        "fruit_weight_mean" : 70
+    },
+    {
+        "fruits_name" : "banana",
+        "fruit_fructose" : 0.03,
+        "fruit_weight_mean" : 120
+    },
+    {
+        "fruits_name" : "lemon",
+        "fruit_fructose" : 0.01,
+        "fruit_weight_mean" : 70
+    },
 ]
