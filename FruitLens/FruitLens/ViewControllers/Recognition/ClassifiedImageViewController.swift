@@ -38,8 +38,4 @@ class ClassifiedImageViewController: VisionObjectRecognitionViewController {
         self.dismiss(animated: true)
     }
     
-    @IBAction func updateLabel(_ sender: Any) {
-        //todo
-    }
-    
 }
