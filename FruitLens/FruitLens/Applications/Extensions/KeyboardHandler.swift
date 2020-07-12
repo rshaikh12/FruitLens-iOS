@@ -15,6 +15,7 @@ protocol KeyboardHandler: UIViewController {
 }
 
 extension UIViewController {
+    // Hide keyboard when you tap on the screen, so you can reach buttons which have been hidden
     func hideKeyboardWhenTappedAround(){
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false

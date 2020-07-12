@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    //
     func configureView() {
         if let detail = detailItem {
             if let topicLabel = noteTitleLabel,
@@ -39,7 +40,7 @@ class DetailViewController: UIViewController {
     }
 
 
-
+    // Segue to CreateChangeViewController to make changes
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showChangeNoteSegue" {
             let changeNoteViewController = segue.destination as! CreateChangeViewController

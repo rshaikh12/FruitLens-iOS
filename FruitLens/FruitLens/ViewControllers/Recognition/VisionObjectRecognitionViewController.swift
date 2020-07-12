@@ -225,7 +225,7 @@ class VisionObjectRecognitionViewController: ViewController {
         let alert = UIAlertController(title: "Fruit Detected", message: "Die folgende Frucht wurde erkannt: " + self.detectedFood!.0, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Hinzufügen", style: .default, handler: addToDB))
         alert.addAction(UIAlertAction(title: "Verwerfen", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Tagebucheintrag erstellen", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Tagebucheintrag erstellen", style: .default, handler: createJournalEntry))
         self.present(alert, animated: true)
 
     }
