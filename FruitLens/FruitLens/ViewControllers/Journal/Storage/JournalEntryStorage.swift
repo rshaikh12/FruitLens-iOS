@@ -19,7 +19,7 @@ class JournalEntryStorage {
     private var managedContextHasBeenSet : Bool = false
     
     private init() {
-        // we need to init our ManagedObjectContext
+        // init ManagedObjectContext
         // This will be overwritten when setManagedContext is called from the view controller.
         managedObjectContext = NSManagedObjectContext(
             concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
@@ -42,7 +42,7 @@ class JournalEntryStorage {
             CoreDataHelper.createNoteInCoreData(
                 noteToBeCreated:          noteToBeAdded,
                 intoManagedObjectContext: self.managedObjectContext)
-            // increase index
+            // update index to enter UUID at right index
             currentIndex += 1
         }
     }
@@ -60,12 +60,7 @@ class JournalEntryStorage {
                 noteIdToBeDeleted:        noteUUID!,
                 fromManagedObjectContext: self.managedObjectContext)
             // update noteIndexToIdDict dictionary
-            // the element we removed was not the last one: update GUID's
             if (at < currentIndex - 1) {
-                // currentIndex - 1 is the index of the last element
-                // but we will remove the last element, so the loop goes only
-                // until the index of the element before the last element
-                // which is currentIndex - 2
                 for i in at ... currentIndex - 2 {
                     noteIndexToIdDict[i] = noteIndexToIdDict[i+1]
                 }
