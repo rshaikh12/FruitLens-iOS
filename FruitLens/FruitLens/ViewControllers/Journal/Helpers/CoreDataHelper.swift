@@ -45,7 +45,6 @@ class CoreDataHelper {
             try intoManagedObjectContext.save()
             count += 1
         } catch let error as NSError {
-            // TODO error handling
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
@@ -82,7 +81,6 @@ class CoreDataHelper {
             try inManagedObjectContext.save()
 
         } catch let error as NSError {
-            // TODO error handling
             print("Could not change. \(error), \(error.userInfo)")
         }
     }
@@ -105,7 +103,6 @@ class CoreDataHelper {
                     noteTimeStamp: noteManagedObjectRead.value(forKey: "noteTimeStamp") as! Int64))
             }
         } catch let error as NSError {
-            // TODO error handling
             print("Could not read. \(error), \(error.userInfo)")
         }
         
@@ -134,7 +131,6 @@ class CoreDataHelper {
                 noteText: noteManagedObjectToBeRead.value(forKey: "noteText") as! String,
                 noteTimeStamp: noteManagedObjectToBeRead.value(forKey: "noteTimeStamp") as! Int64)
         } catch let error as NSError {
-            // TODO error handling
             print("Could not read. \(error), \(error.userInfo)")
             return nil
         }
@@ -160,11 +156,9 @@ class CoreDataHelper {
                 try fromManagedObjectContext.save()
                 self.count -= 1
             } catch let error as NSError {
-                // TODO error handling
                 print("Could not save. \(error), \(error.userInfo)")
             }
         } catch let error as NSError {
-            // TODO error handling
             print("Could not delete. \(error), \(error.userInfo)")
         }
         
