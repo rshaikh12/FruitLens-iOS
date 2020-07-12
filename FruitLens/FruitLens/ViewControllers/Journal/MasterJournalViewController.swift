@@ -28,13 +28,13 @@ class MasterJournalViewController: UITableViewController {
             return
         
         }
-        
+            // create context
         let managedContext = appDelegate.persistentContainer.viewContext
             
             // set context in the storage
         JournalEntryStorage.storage.setManagedContext(managedObjectContext: managedContext)
             
-            // Do any additional setup after loading the view, typically from a nib.
+            
         navigationItem.leftBarButtonItem = editButtonItem
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
@@ -54,12 +54,12 @@ class MasterJournalViewController: UITableViewController {
             performSegue(withIdentifier: "showCreateNoteSegue", sender: self)
     }
         
-    //Segues
+    //Segue to right cell
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                //let object = objects[indexPath.row]
                 let object = JournalEntryStorage.storage.readNote(at: indexPath.row)
+                //Segue to DetailViewController
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -74,17 +74,18 @@ class MasterJournalViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            //return objects.count
+            //return number of objects
         return JournalEntryStorage.storage.count()
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NoteUITableViewCell
-
+        //read object from storage 
         if let object = JournalEntryStorage.storage.readNote(at: indexPath.row) {
         cell.noteTitleLabel!.text = object.noteTitle
         cell.noteTextLabel!.text = object.noteText
-            cell.noteDateLabel!.text = DateHelper.convertDate(date: Date.init(seconds: object.noteTimeStamp))
+        //convert date to show seconds
+        cell.noteDateLabel!.text = DateHelper.convertDate(date: Date.init(seconds: object.noteTimeStamp))
         }
         
         return cell
@@ -95,12 +96,12 @@ class MasterJournalViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        //Here we remove notes from storage if editing style is set to delete
         if editingStyle == .delete {
-            //objects.remove(at: indexPath.row)
             JournalEntryStorage.storage.removeNote(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+           //insert note 
         }
     }
 
