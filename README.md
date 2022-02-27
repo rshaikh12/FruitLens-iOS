@@ -1,5 +1,6 @@
 # FruitLens
-Eine App für iPhones mit der der Fructosegehalt von Früchten mittels Objekterkennung für ein durchschnittliches Verzehrgewicht ermittelt werden kann.
+An app for iPhones that can be used to determine the fructose content of fruits using object detection and recognition based on the average consumption weight (can be specified further in the app).
+The fructose consumption is recorded in a diary and provides information on how much of the daily requirement / limit is covered.
 
 <p float="left">
   <img src=".readmegifs/Anmeldung.gif" width="200" />
